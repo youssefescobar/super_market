@@ -29,7 +29,7 @@ app.use("/api/carts" , cartRoutes);
 app.use("/api/payment" , paymentRoutes);
 app.use("/api/category" , categoryRoutes);
 app.get("/", (req, res) => {
-    res.send("API is running...");
+    res.send("API is runningggg...");
 }
 );
 
