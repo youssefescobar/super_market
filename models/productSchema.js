@@ -18,7 +18,7 @@ const productSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    image:{
+    imageUrl:{
         type: String 
 
         },
@@ -27,10 +27,12 @@ const productSchema = new mongoose.Schema({
         required: true,
         min: 0
     },
+    
 
     qrCode: {
         type: String
     },
+
     sizes: [
         {
             size:{
@@ -46,6 +48,7 @@ const productSchema = new mongoose.Schema({
                 required:true,
                 min: 0
             },
+
 
         }
     ]

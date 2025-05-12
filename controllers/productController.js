@@ -4,7 +4,7 @@ exports.createProduct = async (req,res,next)=>{
     try{
 
         const { name , description , price , category , stock , qrCode, sizes }=req.body;
-        const image = req.file ? req.file.filename : null;
+        const imageUrl = req.file ? req.file.filename : null;
 
         const existingProduct = await Product.findOne({ name: name.trim() });
         if (existingProduct) {
@@ -18,13 +18,13 @@ exports.createProduct = async (req,res,next)=>{
             price :price,
             category :category.trim(),
             stock ,
-            image,
+            imageUrl,
             qrCode:qrCode,
             sizes, 
         });
        
         await newProduct.save();
-        res.status(201).json({message:"Product created successfully.",
+        res.status(201).json({message:"Product created successfully.", 
          newProduct
     });
 

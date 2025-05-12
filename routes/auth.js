@@ -84,5 +84,25 @@ router.post('/login', async (req,res)=>{
 
 });
 
+router.post('/forgetPassword',async (req, res, next) => {
+    const user = await User.findOne({ email: req.body.email });
+  
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+  
+    const resetToken = user.createResetPasswordToken();
+    await user.save({ validateBeforeSave: false });
+  
+    
+    res.status(200).json({
+      message: 'Reset token generated',
+      resetToken, 
+    });
+  });
+  
+    
+
+
 
 module.exports=router;
