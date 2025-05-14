@@ -117,6 +117,8 @@ router.post('/forgetPassword', async (req, res, next) => {
       });
   
     } catch (error) {
+        console.error('💥 Error in forgetPassword route:', error); // ✅ Add this line
+
       if (user) {
         user.passwordResetToken = undefined;
         user.passwordResetTokenExpires = undefined;
