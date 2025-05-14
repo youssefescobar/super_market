@@ -19,7 +19,7 @@ router.post('/register', async (req,res)=>{
 
     const exitingUser =  await User.findOne({email});
     if(exitingUser){
-       return res.status(400).json({message:"rser already exists"});
+       return res.status(400).json({message:"User already exists"});
     }
     const hashedPassword = await bcrypt.hash( password.trim() , 10 ); 
 
@@ -115,8 +115,8 @@ router.post('/forgetPassword', async (req, res, next) => {
       });
       
       return res.status(200).json({
-        message: "Reset token generrrrrrrrrrated",
-        // resetToken: resetToken 
+        message: "Reset token generated",
+        resetToken: resetToken 
       });
       
       
