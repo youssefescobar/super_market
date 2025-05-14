@@ -123,11 +123,17 @@ router.post('/forgetPassword', async (req, res, next) => {
         user.passwordResetTokenExpires = undefined;
         await user.save({ validateBeforeSave: false });
       }
-  
       console.error('Error in forgetPassword route:', error);
-      return res.status(500).json({ message: 'Server error' });
+      return res.status(500).json({ message: 'Server error' },error);
     }
   });
+  router.patch('/resetPassword', async (req ,res)=>{
+    try{
+
+    }catch(err){
+
+    }
+  })
   
 
   
