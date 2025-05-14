@@ -103,28 +103,47 @@ router.post('/forgetPassword', async (req, res, next) => {
       const resetUrl = `${req.protocol}://${req.get('host')}/api/auth/resetPassword/${resetToken}`;
       const message = `We have received a password reset request. Please use the link below to reset your password:\n\n${resetUrl}\n\nThis link will expire in 10 minutes.`;
   
-      await sendEmail({
-        email: user.email,
-        subject: "Password Reset Request",
-        message,
-      });
+      try {
+        await sendEmail({
+          email: user.email,
+          subject: "Password Reset Request",
+          message,
+        });
   
-      // ✅ Final response (after sending email)
-      return res.status(200).json({
-        success: true,
-        message: "Password reset link sent to email",
-        resetToken, // Optional: remove in production for security
-      });
+        // ✅ Final response (after sending email)
+        return res.status(200).json({
+          success: true,
+          message: "Password reset link sent to email",
+          resetToken, // Optional: remove in production for security
+        });
+      } catch (emailError) {
+        // If email sending fails, reset the token and report error
+        user.passwordResetToken = undefined;
+        user.passwordResetTokenExpires = undefined;
+        await user.save({ validateBeforeSave: false });
+        
+        return res.status(500).json({ 
+          success: false,
+          message: 'Error sending email. Please try again.'
+        });
+      }
   
     } catch (error) {
-
       if (user) {
         user.passwordResetToken = undefined;
         user.passwordResetTokenExpires = undefined;
         await user.save({ validateBeforeSave: false });
       }
+      
       console.error('Error in forgetPassword route:', error);
-      return res.status(500).json({ message: 'Server error' },error);
+      return res.status(500).json({ 
+        success: false, 
+        message: 'Server error',
+        error: {
+          message: error.message,
+          stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
+        }
+      });
     }
   });
   router.patch('/resetPassword', async (req ,res)=>{
