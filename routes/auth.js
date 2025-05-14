@@ -116,36 +116,28 @@ router.post('/forgetPassword', async (req, res, next) => {
           message: "Password reset link sent to email",
           resetToken, // Optional: remove in production for security
         });
+  
       } catch (emailError) {
-        // If email sending fails, reset the token and report error
+        // If email sending fails, clear the reset token and expiration time
         user.passwordResetToken = undefined;
         user.passwordResetTokenExpires = undefined;
         await user.save({ validateBeforeSave: false });
-        
+  
         return res.status(500).json({ 
           success: false,
-          message: 'Error sending email. Please try again.'
+          message: error.message
         });
       }
-  
     } catch (error) {
-      if (user) {
-        user.passwordResetToken = undefined;
-        user.passwordResetTokenExpires = undefined;
-        await user.save({ validateBeforeSave: false });
-      }
-      
       console.error('Error in forgetPassword route:', error);
-      return res.status(500).json({ 
-        success: false, 
-        message: 'Server error',
-        error: {
-          message: error.message,
-          stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
-        }
+      return res.status(500).json({
+        success: false,
+        message: error.message 
       });
     }
   });
+  
+
   router.patch('/resetPassword', async (req ,res)=>{
     try{
 
