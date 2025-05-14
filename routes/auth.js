@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const User = require('../models/userSchema');
 require("dotenv").config(); 
+const sendEmail= require('../Utils/email')
 
 const JWT_SECRET = process.env.JWT_SECRET;
 
@@ -18,7 +19,7 @@ router.post('/register', async (req,res)=>{
 
     const exitingUser =  await User.findOne({email});
     if(exitingUser){
-       return res.status(400).json({message:"User already exists"});
+       return res.status(400).json({message:"rser already exists"});
     }
     const hashedPassword = await bcrypt.hash( password.trim() , 10 ); 
 
@@ -84,22 +85,53 @@ router.post('/login', async (req,res)=>{
 
 });
 
-router.post('/forgetPassword',async (req, res, next) => {
-    const user = await User.findOne({ email: req.body.email });
-  
-    if (!user) {
-      return res.status(404).json({ message: 'User not found' });
+
+
+router.post('/forgetPassword', async (req, res, next) => {
+    let user;
+    try {
+      user = await User.findOne({ email: req.body.email });
+      
+      if (!user) {
+        return res.status(404).json({ success: false, message: 'User not found' });
+      }
+      
+      const resetToken = user.createResetPasswordToken();
+      await user.save({ validateBeforeSave: false });
+      
+      // Return the token response - This is the ONLY return statement that will execute
+      return res.status(200).json({
+        message: "Reset token generrrrrrrrrrated",
+        resetToken: resetToken 
+      });
+
+      const resetUrl = `${req.protocol}://${req.get('host')}/api/auth/resetPassword/${resetToken}`;
+      const message = `We have received a password reset request. Please use the link below to reset your password:\n\n${resetUrl}\n\nThis link will expire in 10 minutes.`;
+      
+      await sendEmail({
+        email: user.email,
+        subject: "Password Reset Request",
+        message,
+      });
+      
+      return res.status(200).json({
+        message: "Reset token generrrrrrrrrrated",
+        // resetToken: resetToken 
+      });
+      
+      
+    } catch (error) {
+      if (user) {
+        user.passwordResetToken = undefined;
+        user.passwordResetTokenExpires = undefined;
+        await user.save({ validateBeforeSave: false });
+      }
+      
+      console.error('Error in forget password route:', error);
+      return res.status(500).json({ message: 'Server error' });
     }
-  
-    const resetToken = user.createResetPasswordToken();
-    await user.save({ validateBeforeSave: false });
-  
-    
-    res.status(200).json({
-      message: 'Reset token generated',
-      resetToken, 
-    });
   });
+
   
     
 
