@@ -88,55 +88,66 @@ router.post('/login', async (req,res)=>{
 
 
 router.post('/forgetPassword', async (req, res, next) => {
-    let user;
-  
-    try {
-      user = await User.findOne({ email: req.body.email });
-  
-      if (!user) {
-        return res.status(404).json({ success: false, message: 'User not found' });
-      }
-  
-      const resetToken = user.createResetPasswordToken();
-      await user.save({ validateBeforeSave: false });
-  
-      const resetUrl = `${req.protocol}://${req.get('host')}/api/auth/resetPassword/${resetToken}`;
-      const message = `We have received a password reset request. Please use the link below to reset your password:\n\n${resetUrl}\n\nThis link will expire in 10 minutes.`;
-  
-      try {
-        await sendEmail({
-          email: user.email,
-          subject: "Password Reset Request",
-          message,
-        });
-  
-        // ✅ Final response (after sending email)
-        return res.status(200).json({
-          success: true,
-          message: "Password reset link sent to email",
-          resetToken, // Optional: remove in production for security
-        });
-  
-      } catch (emailError) {
-        // If email sending fails, clear the reset token and expiration time
-        user.passwordResetToken = undefined;
-        user.passwordResetTokenExpires = undefined;
-        await user.save({ validateBeforeSave: false });
-  
-        return res.status(500).json({ 
-          success: false,
-          message: error.message
-        });
-      }
-    } catch (error) {
-      console.error('Error in forgetPassword route:', error);
-      return res.status(500).json({
+  try {
+    // Validate email input
+    const { email } = req.body;
+    if (!email) {
+      return res.status(400).json({
         success: false,
-        message: error.message 
+        message: 'Email is required',
       });
     }
-  });
-  
+
+    // Find user by email
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: 'No user found with this email',
+      });
+    }
+
+    // Generate reset token and save user
+    const resetToken = user.createResetPasswordToken();
+    await user.save({ validateBeforeSave: false });
+
+    // Construct reset URL
+    const resetUrl = `${req.protocol}://${req.get('host')}/api/auth/resetPassword/${resetToken}`;
+    const message = `We have received a password reset request. Please use the link below to reset your password:\n\n${resetUrl}\n\nThis link will expire in 10 minutes.`;
+
+    try {
+      // Send email
+      await sendEmail({
+        email: user.email,
+        subject: 'Password Reset Request',
+        message,
+      });
+
+      return res.status(200).json({
+        success: true,
+        message: 'Password reset link sent to email',
+        // Note: Avoid sending resetToken in production for security
+      });
+    } catch (emailError) {
+      // Clear token and expiration on email failure
+      user.passwordResetToken = undefined;
+      user.passwordResetTokenExpires = undefined;
+      await user.save({ validateBeforeSave: false });
+
+      console.error('Email sending failed:', emailError);
+      return res.status(500).json({
+        success: false,
+        message: 'Failed to send password reset email. Please try again later.',
+      });
+    }
+  } catch (error) {
+    console.error('Error in forgetPassword route:', error);
+    return res.status(500).json({
+      success: false,
+      message: 'An unexpected error occurred. Please try again later.',
+    });
+  }
+});
 
   router.patch('/resetPassword', async (req ,res)=>{
     try{
