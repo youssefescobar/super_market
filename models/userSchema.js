@@ -28,6 +28,9 @@ const { type } = require('os');
     },
     passwordResetTokenExpires:{
         type: Date ,
+     },
+     confirmPassword:{
+        type: String,
      }
 
 

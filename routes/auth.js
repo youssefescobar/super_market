@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/userSchema');
 require("dotenv").config(); 
 const sendEmail= require('../Utils/email')
+const crypto = require ('crypto');
 
 const JWT_SECRET = process.env.JWT_SECRET;
 
@@ -126,7 +127,6 @@ router.post('/forgetPassword', async (req, res, next) => {
       return res.status(200).json({
         success: true,
         message: 'Password reset link sent to email',
-        // Note: Avoid sending resetToken in production for security
       });
     } catch (emailError) {
       // Clear token and expiration on email failure
@@ -149,13 +149,55 @@ router.post('/forgetPassword', async (req, res, next) => {
   }
 });
 
-  router.patch('/resetPassword', async (req ,res)=>{
-    try{
 
-    }catch(err){
 
+ router.patch('/resetPassword/:token', async (req, res) => {
+  try {
+    const hashedToken = crypto.createHash('sha256').update(req.params.token).digest('hex');
+
+    const user = await User.findOne({
+      passwordResetToken: hashedToken,
+      passwordResetTokenExpires: { $gt: Date.now() }
+    });
+
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: 'Token is invalid or has expired',
+      });
     }
-  })
+
+    user.password = req.body.password;
+    user.confirmPassword = req.body.confirmPassword;
+    user.passwordResetToken = undefined;
+    user.passwordResetTokenExpires = undefined;
+
+    await user.save(); 
+
+    const loginToken = jwt.sign(
+      {
+        id: user._id,
+        role: user.role,
+      },
+      JWT_SECRET,
+      { expiresIn: '1d' }
+    );
+
+    res.json({
+      token: loginToken,
+      user: {
+        id: user._id,
+        name: user.name,
+        email: user.email,
+        role: user.role,
+      }
+    });
+
+  } catch (err) {
+    console.error('Error in resetPassword:', err);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
   
 
   
