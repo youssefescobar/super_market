@@ -5,7 +5,7 @@ const sendEmail = async (options) => {
     try {
         // Create transporter with Mailtrap configuration
         const transporter = nodemailer.createTransport({
-            host: process.env.MAILTRAP_HOST || 'smtp.mailtrap.io',
+            host: process.env.MAILTRAP_HOST,
             port: parseInt(process.env.MAILTRAP_PORT, 10) || 587, 
             auth: {
                 user: process.env.MAILTRAP_USERNAME,
@@ -18,7 +18,8 @@ const sendEmail = async (options) => {
             from: '"Cineflix Support" <support@cineflix.com>',
             to: options.email,
             subject: options.subject,
-            text: options.message,
+            html: options.message
+
         };
 
         // Send email
