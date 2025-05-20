@@ -15,7 +15,7 @@ const sendEmail = async (options) => {
 
         // Define email options
         const emailOptions = {
-            from: '"Cineflix Support" <support@cineflix.com>',
+            from: '"Cineflix Support" <no-reply@cineflix.com>',
             to: options.email,
             subject: options.subject,
             html: options.message
