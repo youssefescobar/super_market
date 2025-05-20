@@ -174,7 +174,7 @@ router.post('/forgetPassword', async (req, res, next) => {
 
     await user.save(); 
 
-    const loginToken = jwt.sign(
+    const loginToken = jwt.sign( 
       {
         id: user._id,
         role: user.role,

@@ -24,7 +24,7 @@ const { type } = require('os');
         default:'user',
     },
     passwordResetToken:{
-       type: String,
+       type: String, 
     },
     passwordResetTokenExpires:{
         type: Date ,

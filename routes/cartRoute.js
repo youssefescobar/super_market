@@ -8,7 +8,7 @@ router.patch("/decrease", auth ,cartController.decreaseProductQuantity);
 router.delete("/delete", auth ,cartController.removeProductFromCart);
 router.delete("/:id", auth ,cartController.removeCart);
 router.put("/:id",  auth ,cartController.updateCart);
-router.get("/:id",cartController.getCart);
+router.get("/:id", auth ,cartController.getCart);
 
 
 module.exports= router;

@@ -62,7 +62,7 @@ exports.removeProduct = async (req,res,next)=>{
         res.status(500).json({message:err.message});
     }
 };
-
+ 
 exports.updateProduct = async (req, res, next) => {
     try { 
         const { name , description , price , category , stock , sizes } =req.body;

@@ -28,7 +28,6 @@ const productSchema = new mongoose.Schema({
         min: 0
     },
     
-
     qrCode: {
         type: String
     },
