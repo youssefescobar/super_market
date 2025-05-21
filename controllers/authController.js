@@ -2,7 +2,7 @@ const User = require('../models/userSchema');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
-const sendEmail = require('../utils/email');
+const sendEmail = require('../Utils/email');
 const { passwordResetCodeMessage } = require('../Utils/messagesTemplates');
 const JWT_SECRET = process.env.JWT_SECRET;
 
