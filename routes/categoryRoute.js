@@ -5,7 +5,6 @@ const auth = require("../middleware/authMiddleware");
 const authorize = require("../middleware/authorize");
 const upload = require('../middleware/upload');
 
-const upload = require("../middleware/upload");
 router.get("/all", auth, categoryController.getAllCategories);
 router.post(
   "/create",
