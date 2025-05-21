@@ -90,3 +90,70 @@ exports.updateProduct = async (req, res, next) => {
         res.status(500).json({ message: err.message });
     }
 };
+
+exports.getAllProducts = async (req, res) => {
+  try {
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
+    const skip = (page - 1) * limit;
+
+    const category = req.query.category;
+    const minPrice = req.query.minPrice;
+    const maxPrice = req.query.maxPrice;
+    const sort = req.query.sort;
+
+    const filter = {};
+
+    if (category) {
+      filter.category = category;
+    }
+
+    if (minPrice || maxPrice) {
+      filter.price = {};
+      if (minPrice) filter.price.$gte = Number(minPrice);
+      if (maxPrice) filter.price.$lte = Number(maxPrice);
+    }
+
+    const total = await Product.countDocuments(filter);
+    const totalPages = Math.ceil(total / limit);
+    let sortOption = {};
+    if (sort === 'asc') {
+      sortOption.price = 1;
+    } else if (sort === 'desc') {
+      sortOption.price = -1; 
+    }
+
+    const products = await Product.find(filter)
+      .skip(skip)
+      .limit(limit)
+      .sort(sortOption)
+      .select('-__v');
+
+    res.status(200).json({
+      totalPages,
+      currentPage: page,
+      limit,
+      totalProducts: total,
+      products,
+    });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
+
+exports.searchProducts = async (req, res) => {
+    try {
+        const query = req.query.q;
+        const products = await Product.find({
+            $or: [
+                { name: new RegExp(query, 'i') },
+                { description: new RegExp(query, 'i') }
+            ]
+        });
+        res.status(200).json(products);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+};
+

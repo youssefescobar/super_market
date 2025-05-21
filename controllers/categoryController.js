@@ -35,6 +35,14 @@ exports.getCategory = async (req,res)=>{
     }
 };
 
+exports.getAllCategories = async (req, res) => {
+  try {
+    const categories = await Category.find().select('-__v');
+    res.status(200).json(categories);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
 
 exports.updateCategory = async (req, res) => {
     try {
