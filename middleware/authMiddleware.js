@@ -13,6 +13,7 @@ const auth = async (req, res, next) => {
         const pureToken = token.split(' ')[1];
         const decoded = jwt.verify(pureToken, JWT_SECRET);
         req.user = decoded;
+        req.userId = decoded.id // lol ill clean it up later
         next();
     } catch (err) {
         res.status(400).json({ message: 'Invalid token' });
