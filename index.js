@@ -2,6 +2,12 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const cors = require('cors');
+const axios = require('axios');
+
+const fs = require('fs');
+const rules = JSON.parse(fs.readFileSync('association_rules.json'));
+
+
 const path = require('path'); 
 const seedData =require('./seeds/seed.js');
 const mongoose = require("mongoose");
@@ -21,6 +27,8 @@ const cartRoutes =require ('./routes/cartRoute.js');
 const authRoutes = require('./routes/auth.js');
 const paymentRoutes = require('./routes/paymentRoute.js');
 const categoryRoutes = require('./routes/categoryRoute.js');
+const recommendation = require('./routes/Recommendation.js');
+
 
 app.use('/api/auth' , authRoutes);
 app.use("/api/users" , userRoutes);
@@ -28,6 +36,7 @@ app.use("/api/products" , productRoutes);
 app.use("/api/carts" , cartRoutes);
 app.use("/api/payment" , paymentRoutes);
 app.use("/api/category" , categoryRoutes);
+app.use("/api" , recommendation);
 app.get("/", (req, res) => {
     res.send("API is runningggg...");
 }
