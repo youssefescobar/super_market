@@ -9,7 +9,7 @@ const virtualCartSchema = new mongoose.Schema(
       unique: true,
       required: true,
     },
-    items: [
+    items: [ 
       {
         productId: {
           type: mongoose.Schema.Types.ObjectId,
