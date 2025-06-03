@@ -8,7 +8,6 @@ const upload = require('../middleware/upload')
 
 router.get('/search', productController.searchProducts);
 router.get('/', productController.getAllProducts);
-router.get('/all', productController.getAllProduct);
 
 router.post('/create', auth, authorize('admin'), upload.single('imageUrl'),productController.createProduct);
 router.get('/:id',auth, productController.getProduct);
