@@ -14,6 +14,10 @@ router.post(
   categoryController.createCategory
 );
 router.get("/:id", auth, authorize("admin"), categoryController.getCategory);
+
+router.get("/all", auth, authorize("admin"), categoryController.getAllCategories);
+
+
 router.put(
   "/:id",
   auth,
@@ -21,6 +25,7 @@ router.put(
   upload.single("image"),
   categoryController.updateCategory
 );
+
 router.delete(
   "/:id",
   auth,

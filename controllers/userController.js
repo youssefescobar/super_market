@@ -102,7 +102,7 @@ exports.changeUserRole = async (req, res, next) => {
         return res.status(200).json({ message: 'User role updated successfully', user });
     } catch (err) {
         next(err);  // Pass the error to the error-handling middleware
-    }
+    } 
 };
 
 exports.getAllUsers = async (req, res) => {
