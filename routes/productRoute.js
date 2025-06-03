@@ -7,7 +7,7 @@ const authorize = require('../middleware/authorize');
 const upload = require('../middleware/upload')
 
 router.get('/search', productController.searchProducts);
-router.get('/', productController.getAllProducts)
+router.get('/', productController.getAllProducts);
 
 router.post('/create', auth, authorize('admin'), upload.single('imageUrl'),productController.createProduct);
 router.get('/:id',auth, productController.getProduct);
