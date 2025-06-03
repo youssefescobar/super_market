@@ -48,15 +48,6 @@ exports.getProduct = async (req,res,next)=>{
 };
 
 
-exports.getAllProduct = async (req,res,next)=>{
-    try{ 
-        const products = await Product.find();
-        res.json(products);
-
-    }catch(err){
-        res.status(500).json({message:err.message});
-    }
-};
 
 exports.removeProduct = async (req,res,next)=>{
     try{ 
