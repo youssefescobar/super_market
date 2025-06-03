@@ -4,7 +4,4 @@
 # Ignore node_modules
 node_modules/
 
-# Ignore specific seed files
-seeds/recommendation_seeder.js
-seeds/checkSeed.js
-seeds/association_rules.json
+
