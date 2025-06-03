@@ -4,9 +4,6 @@ const app = express();
 const cors = require('cors');
 const axios = require('axios');
 
-const fs = require('fs');
-const rules = JSON.parse(fs.readFileSync('association_rules.json'));
-
 
 const path = require('path'); 
 const seedData =require('./seeds/seed.js');
