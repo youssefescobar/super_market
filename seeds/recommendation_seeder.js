@@ -8,6 +8,9 @@ require("dotenv").config({ path: "../.env" });
 const MONGO_URI = process.env.MONGO_URI;
 const JSON_FILE_PATH = path.join(__dirname, 'association_rules.json');
 
+
+
+
 async function seedDatabase() {
   try {
     console.log('Attempting to connect to MongoDB...');
