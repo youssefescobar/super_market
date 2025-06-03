@@ -27,8 +27,8 @@ const cartRoutes =require ('./routes/cartRoute.js');
 const authRoutes = require('./routes/auth.js');
 const paymentRoutes = require('./routes/paymentRoute.js');
 const categoryRoutes = require('./routes/categoryRoute.js');
-const recommendation = require('./routes/Recommendation.js');
 
+const recommendationRoutes = require('./routes/recommendationRoutes.js')
 
 app.use('/api/auth' , authRoutes);
 app.use("/api/users" , userRoutes);
@@ -36,7 +36,8 @@ app.use("/api/products" , productRoutes);
 app.use("/api/carts" , cartRoutes);
 app.use("/api/payment" , paymentRoutes);
 app.use("/api/category" , categoryRoutes);
-app.use("/api" , recommendation);
+app.use('/api/recommendations', recommendationRoutes);
+
 app.get("/", (req, res) => {
     res.send("API is runningggg...");
 }

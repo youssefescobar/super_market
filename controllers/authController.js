@@ -1,10 +1,9 @@
-const User = require("../models/userSchema");
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
-const crypto = require("crypto");
-const sendEmail = require("../Utils/email");
-const { passwordResetCodeMessage } = require("../Utils/messagesTemplates");
-
+const User = require('../models/userSchema');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const crypto = require('crypto');
+const sendEmail = require('../Utils/email');
+const { passwordResetCodeMessage } = require('../Utils/messagesTemplates');
 const JWT_SECRET = process.env.JWT_SECRET;
 
 exports.register = async (req, res) => {
