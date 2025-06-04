@@ -24,7 +24,7 @@ const cartRoutes =require ('./routes/cartRoute.js');
 const authRoutes = require('./routes/auth.js');
 const paymentRoutes = require('./routes/paymentRoute.js');
 const categoryRoutes = require('./routes/categoryRoute.js');
-
+ 
 const recommendationRoutes = require('./routes/recommendationRoutes.js')
 
 app.use('/api/auth' , authRoutes);

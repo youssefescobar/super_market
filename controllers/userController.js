@@ -35,7 +35,7 @@ exports.getUser = async (req,res,next) => {
 
         }
         res.json(users);
-
+ 
        
     } catch (error) {
         res.status(500).json({message:error.message});
