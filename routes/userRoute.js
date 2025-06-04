@@ -7,7 +7,7 @@ const authorize = require('../middleware/authorize');
 
 router.post('/create', validateUser, auth, authorize('admin'), userController.create);
  
-router.get('/all', auth, authorize('admin'), userController.getAllUsers); // get all users for admin
+router.get('/all', userController.getAllUsers); // get all users for admin
 router.get('/MyProfile', auth, userController.getMyProfile); // profile
 
 router.get('/:id', auth, authorize('admin'), userController.getUser);
