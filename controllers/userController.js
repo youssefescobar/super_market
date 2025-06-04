@@ -47,7 +47,7 @@ exports.updateUser = async(req, res ,next )=>{
     try {
         const updateData= { ...req.body };
         if(updateData.password){
-           updateData.password = await bcrypt.hash(password.trim(), 10);
+           updateData.password = await bcrypt.hash(updateData.password.trim(), 10);
 
         }
         const updatedUser= await User.findByIdAndUpdate(
