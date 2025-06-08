@@ -3,24 +3,23 @@ require('dotenv').config();
 
 const sendEmail = async (options) => {
     try {
-        // Create transporter for Gmail
         const transporter = nodemailer.createTransport({
-            service: 'gmail',
+            host: process.env.GMAIL_HOST,
+            port: parseInt(process.env.GMAIL_PORT, 10),
+            secure: true, // Use true for port 465
             auth: {
-                user: process.env.GMAIL_USER,       // your Gmail address
-                pass: process.env.GMAIL_APP_PASS    // your Gmail app password (not regular password)
+                user: process.env.GMAIL_USER,
+                pass: process.env.GMAIL_APP_PASS
             }
         });
 
-        // Define email options
         const emailOptions = {
             from: '"Cineflix Support" <no-reply@cineflix.com>',
             to: options.email,
             subject: options.subject,
             html: options.message
         };
- 
-        // Send email
+
         const info = await transporter.sendMail(emailOptions);
         console.log('Email sent successfully:', info.messageId);
         return info;
