@@ -3,13 +3,12 @@ require('dotenv').config();
 
 const sendEmail = async (options) => {
     try {
-        // Create transporter with Mailtrap configuration
+        // Create transporter for Gmail
         const transporter = nodemailer.createTransport({
-            host: process.env.MAILTRAP_HOST,
-            port: parseInt(process.env.MAILTRAP_PORT, 10) || 587, 
+            service: 'gmail',
             auth: {
-                user: process.env.MAILTRAP_USERNAME,
-                pass: process.env.MAILTRAP_PASSWORD
+                user: process.env.GMAIL_USER,       // your Gmail address
+                pass: process.env.GMAIL_APP_PASS    // your Gmail app password (not regular password)
             }
         });
 
@@ -19,9 +18,8 @@ const sendEmail = async (options) => {
             to: options.email,
             subject: options.subject,
             html: options.message
-
         };
-
+ 
         // Send email
         const info = await transporter.sendMail(emailOptions);
         console.log('Email sent successfully:', info.messageId);
