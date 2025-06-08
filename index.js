@@ -8,6 +8,7 @@ const axios = require('axios');
 const path = require('path'); 
 // const seedData =require('./seeds/seed.js');
 // const seedUser =require('./seeds/seedUser.js');
+// const cartSeed =require('./seeds/cartSeed.js');
 const mongoose = require("mongoose");
 
 app.use(express.json());
@@ -26,7 +27,8 @@ const authRoutes = require('./routes/auth.js');
 const paymentRoutes = require('./routes/paymentRoute.js');
 const categoryRoutes = require('./routes/categoryRoute.js');
  
-const recommendationRoutes = require('./routes/recommendationRoutes.js')
+const recommendationRoutes = require('./routes/recommendationRoutes.js');
+const seedCart = require("./seeds/cartSeed.js");
 
 app.use('/api/auth' , authRoutes);
 app.use("/api/users" , userRoutes);
@@ -48,6 +50,7 @@ const connectDB = async () => {
         console.log(" MongoDB Connected Successfully");
         // seedData();
     //    seedUser();
+    // seedCart();
     } catch (error) { 
         console.error(" MongoDB Connection Failed:", error);
         process.exit(1);
