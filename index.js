@@ -6,7 +6,8 @@ const axios = require('axios');
 
 
 const path = require('path'); 
-const seedData =require('./seeds/seed.js');
+// const seedData =require('./seeds/seed.js');
+// const seedUser =require('./seeds/seedUser.js');
 const mongoose = require("mongoose");
 
 app.use(express.json());
@@ -46,6 +47,7 @@ const connectDB = async () => {
         }); 
         console.log(" MongoDB Connected Successfully");
         // seedData();
+    //    seedUser();
     } catch (error) { 
         console.error(" MongoDB Connection Failed:", error);
         process.exit(1);
