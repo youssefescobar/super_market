@@ -6,7 +6,7 @@ exports.createCategory = async (req,res)=>{
      const image = req.file ? req.file.filename : null;
      const newCategory = new Category ({
         name ,
-        description,
+        description, 
         image
 
      });

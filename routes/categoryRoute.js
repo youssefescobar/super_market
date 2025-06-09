@@ -11,7 +11,7 @@ router.get("/:id", auth , categoryController.getCategory);
 router.post(
   "/create",
   auth,
-  authorize("admin"),
+  authorize("admin"), 
   upload.single("image"),
   categoryController.createCategory
 );
