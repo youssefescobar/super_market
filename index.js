@@ -48,7 +48,7 @@ const connectDB = async () => {
         await mongoose.connect(MONGO_URI, {
         }); 
         console.log(" MongoDB Connected Successfully");
-        // seedData();  
+        // seedData();   
     //    seedUser();
     // seedCart();
     } catch (error) { 
