@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(cors());
 const error = require("./middleware/error.js");
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
-
+ 
 
 
 
