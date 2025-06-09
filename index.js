@@ -3,7 +3,6 @@ const express = require("express");
 const app = express();
 const cors = require('cors');
 const axios = require('axios');
-const fs = require('fs');
 const path = require('path');
 
 
@@ -15,13 +14,9 @@ const mongoose = require("mongoose");
 app.use(express.json());
 app.use(cors());
 const error = require("./middleware/error.js");
-// app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-// Ensure 'uploads' folder exists
-const uploadDir = path.join(__dirname, 'uploads');
-if (!fs.existsSync(uploadDir)) {
-  fs.mkdirSync(uploadDir);
-}
+
 
 
 const PORT = process.env.PORT || 3000;
