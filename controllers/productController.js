@@ -11,6 +11,38 @@ exports.createProduct = async (req, res, next) => {
       return res.status(400).json({ message: "Product already exists." });
     }
 
+    const newProduct = new Product({
+      name: name.trim(),
+      description: description.trim(),
+      price: price,
+      category: category.trim(),
+      stock,
+      imageUrl,
+      qrCode: qrCode,
+      sizes,
+    });
+
+    await newProduct.save();
+    res
+      .status(201)
+      .json({ message: "Product created successfully.", newProduct });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+exports.getProduct = async (req, res, next) => {
+  try {
+    const productId = req.params.id;
+    const products = await Product.findById(productId);
+    if (!products) {
+      res.status(404).json({ message: " Product not found. " });
+    }
+    res.json(products);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
 exports.removeProduct = async (req, res, next) => {
   try {
     const productId = req.params.id;
