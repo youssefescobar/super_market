@@ -4,7 +4,7 @@ const Product = require("../models/productSchema");
 // check decreaseProductQuantity, removeProductFromCart, updateCart
 exports.addProductToCart = async (req, res, next) => {
 
-    const userId = req.user.id;
+    const userId = req.userId;
     const { qrCodeData } = req.body;
 
     if (!qrCodeData) {
@@ -28,10 +28,10 @@ try {
 
     if (itemIndex > -1) {
       // Update quantity
-      cart.items[itemIndex].quantity += quantity;
+        cart.items[itemIndex].quantity += 1;
     } else {
       // Add new product to cart
-      cart.items.push({ product: product._id, quantity: 1 });
+        cart.items.push({ productId: product._id, quantity: 1 });
     }
 
     await cart.save();
@@ -40,6 +40,7 @@ try {
       message: "Product added to cart ",
       cart,
     });
+
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
