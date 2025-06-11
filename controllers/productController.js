@@ -43,7 +43,6 @@ exports.getProduct = async (req, res, next) => {
   }
 };
 
-
 exports.removeProduct = async (req, res, next) => {
   try {
     const productId = req.params.id;
