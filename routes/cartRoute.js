@@ -3,7 +3,7 @@ const router = express.Router();
 const cartController = require("../controllers/cartController");
 const auth = require("../middleware/authMiddleware");
 
-router.post("/add", cartController.addProductToCart);
+router.post("/add", auth ,cartController.addProductToCart);
 router.get("/MyCart", auth, cartController.getMyCart);
 router.delete("/clear", auth, cartController.clearCart);
 
