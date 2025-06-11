@@ -14,6 +14,10 @@ const auth = async (req, res, next) => {
         const decoded = jwt.verify(pureToken, JWT_SECRET);
         req.user = decoded;
         req.userId = decoded.id // lol ill clean it up later
+        console.log('Auth token:', token);
+console.log('Decoded token:', decoded);
+console.log('req.userId:', req.userId);
+
         next();
     } catch (err) {
         res.status(400).json({ message: 'Invalid token' });
