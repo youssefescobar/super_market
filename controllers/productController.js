@@ -144,7 +144,7 @@ exports.searchProducts = async (req, res) => {
         { name: new RegExp(query, "i") },
         { description: new RegExp(query, "i") },
       ],
-    });
+    }).select("name description imageUrl _id price stock");;
     res.status(200).json(products);
   } catch (err) {
     res.status(500).json({ message: err.message });
