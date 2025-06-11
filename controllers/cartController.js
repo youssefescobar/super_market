@@ -3,21 +3,27 @@ const Product = require("../models/productSchema");
 
 // check decreaseProductQuantity, removeProductFromCart, updateCart
 exports.addProductToCart = async (req, res, next) => {
-  try {
-    const userId = req.user.id;
-    const { productId, quantity } = req.body;
 
-    if (!productId || !quantity) {
-      return res.status(400).json({ message: "Missing productId or quantity" });
+    const userId = req.user.id;
+    const { qrCodeData } = req.body;
+
+    if (!qrCodeData) {
+      return res.status(400).json({ message: " qrCodeData required" });
     }
+try {
+    
+      const product= await Product.findOne({qrCodeData});
+      if(!product){
+        return res.status(400).json({ message: " Product not found " });
+      }
 
     let cart = await Cart.findOne({ userId });
     if (!cart) {
-      cart = await Cart.create({ userId, items: [] });
+      cart = new Cart({ userId, items: [{ product: product._id, quantity: 1  }] });
     }
 
     const itemIndex = cart.items.findIndex(
-      (item) => item.productId.toString() === productId
+      (item) => item.productId.toString() ===  product._id.toString()
     );
 
     if (itemIndex > -1) {
@@ -25,13 +31,13 @@ exports.addProductToCart = async (req, res, next) => {
       cart.items[itemIndex].quantity += quantity;
     } else {
       // Add new product to cart
-      cart.items.push({ productId, quantity });
+      cart.items.push({ product: product._id, quantity: 1 });
     }
 
     await cart.save();
 
     return res.status(201).json({
-      message: "Product added to cart successfully",
+      message: "Product added to cart ",
       cart,
     });
   } catch (err) {
