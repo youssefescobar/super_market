@@ -1,105 +1,89 @@
-const Product =require('../models/productSchema');
+const Product = require("../models/productSchema");
 
-exports.createProduct = async (req,res,next)=>{
-    try{
+exports.createProduct = async (req, res, next) => {
+  try {
+    const { name, description, price, category, stock, qrCode, sizes } =
+      req.body;
+    const imageUrl = req.file ? req.file.filename : null;
 
-        const { name , description , price , category , stock , qrCode, sizes }=req.body;
-        const imageUrl = req.file ? req.file.filename : null;
+    const existingProduct = await Product.findOne({ name: name.trim() });
+    if (existingProduct) {
+      return res.status(400).json({ message: "Product already exists." });
+    }
 
-        const existingProduct = await Product.findOne({ name: name.trim() });
-        if (existingProduct) {
-          return res.status(400).json({ message: "Product already exists." });
-        };
-
-
-        const newProduct =new Product({
-            name:name.trim() ,
-            description:description.trim() ,
-            price :price,
-            category :category.trim(),
-            stock ,
-            imageUrl,
-            qrCode:qrCode,
-            sizes, 
-        });
-       
-        await newProduct.save();
-        res.status(201).json({message:"Product created successfully.", 
-         newProduct
+    const newProduct = new Product({
+      name: name.trim(),
+      description: description.trim(),
+      price: price,
+      category: category.trim(),
+      stock,
+      imageUrl,
+      qrCode: qrCode,
+      sizes,
     });
 
-    }catch(err){
-        res.status(500).json({message:err.message});
-    }
+    await newProduct.save();
+    res
+      .status(201)
+      .json({ message: "Product created successfully.", newProduct });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
 };
-exports.getProduct = async (req,res,next)=>{
-    try{ 
-        const productId =req.params.id;
-        const products = await Product.findById(productId);
-        if(!products){
-            res.status(404).json({message:" Product not found. "});
-        }
-        res.json(products);
-
-        
-    }catch(err){
-        res.status(500).json({message:err.message});
+exports.getProduct = async (req, res, next) => {
+  try {
+    const productId = req.params.id;
+    const products = await Product.findById(productId);
+    if (!products) {
+      res.status(404).json({ message: " Product not found. " });
     }
-};
-
-
-exports.getAllProduct = async (req,res,next)=>{
-    try{ 
-        const products = await Product.find();
-        res.json(products);
-
-    }catch(err){
-        res.status(500).json({message:err.message});
-    }
+    res.json(products);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
 };
 
-exports.removeProduct = async (req,res,next)=>{
-    try{ 
-        const productId =req.params.id;
-        const deletedProduct =await Product.findByIdAndDelete(productId);
-        if(!deletedProduct){
-            res.status(404).json({message:" Product not found. "});
-        }
-        res.status(201).json({message: "Product deleted"});
-        
 
-        
-    }catch(err){
-        res.status(500).json({message:err.message});
+exports.removeProduct = async (req, res, next) => {
+  try {
+    const productId = req.params.id;
+    const deletedProduct = await Product.findByIdAndDelete(productId);
+    if (!deletedProduct) {
+      res.status(404).json({ message: " Product not found. " });
     }
+    res.status(201).json({ message: "Product deleted" });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
 };
- 
+
 exports.updateProduct = async (req, res, next) => {
-    try { 
-        const { name , description , price , category , stock , sizes } =req.body;
-        const updateData  ={};
-        if(name) updateData.name= name;
-        if(description) updateData.description= description;
-        if(price) updateData.price= price;
-        if(category) updateData.category= category;
-        if(stock) updateData.stock= stock;
-        if(sizes) updateData.sizes= sizes;
+  try {
+    const { name, description, price, category, stock, sizes } = req.body;
+    const updateData = {};
+    if (name) updateData.name = name;
+    if (description) updateData.description = description;
+    if (price) updateData.price = price;
+    if (category) updateData.category = category;
+    if (stock) updateData.stock = stock;
+    if (sizes) updateData.sizes = sizes;
 
-        const updatedProduct = await Product.findByIdAndUpdate(
-            req.params.id,   
-            updateData,     
-            { new: true, runValidators: true }
-        );
+    const updatedProduct = await Product.findByIdAndUpdate(
+      req.params.id,
+      updateData,
+      { new: true, runValidators: true }
+    );
 
-        if (!updatedProduct) {
-            return res.status(404).json({ message: "Product not found." });
-        }
-
-        res.status(200).json({ message: "Product updated successfully.", updatedProduct });
-
-    } catch (err) {
-        res.status(500).json({ message: err.message });
+    if (!updatedProduct) {
+      return res.status(404).json({ message: "Product not found." });
     }
+
+    res
+      .status(200)
+      .json({ message: "Product updated successfully.", updatedProduct });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
 };
 
 exports.getAllProducts = async (req, res) => {
@@ -128,17 +112,17 @@ exports.getAllProducts = async (req, res) => {
     const total = await Product.countDocuments(filter);
     const totalPages = Math.ceil(total / limit);
     let sortOption = {};
-    if (sort === 'asc') {
+    if (sort === "asc") {
       sortOption.price = 1;
-    } else if (sort === 'desc') {
-      sortOption.price = -1; 
+    } else if (sort === "desc") {
+      sortOption.price = -1;
     }
 
     const products = await Product.find(filter)
       .skip(skip)
       .limit(limit)
       .sort(sortOption)
-      .select('-__v');
+      .select("name description imageUrl _id price stock");
 
     res.status(200).json({
       totalPages,
@@ -152,19 +136,17 @@ exports.getAllProducts = async (req, res) => {
   }
 };
 
-
 exports.searchProducts = async (req, res) => {
-    try {
-        const query = req.query.q;
-        const products = await Product.find({
-            $or: [
-                { name: new RegExp(query, 'i') },
-                { description: new RegExp(query, 'i') }
-            ]
-        });
-        res.status(200).json(products);
-    } catch (err) {
-        res.status(500).json({ message: err.message });
-    }
+  try {
+    const query = req.query.q;
+    const products = await Product.find({
+      $or: [
+        { name: new RegExp(query, "i") },
+        { description: new RegExp(query, "i") },
+      ],
+    });
+    res.status(200).json(products);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
 };
-
