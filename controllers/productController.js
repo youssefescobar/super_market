@@ -10,10 +10,7 @@ exports.createProduct = async (req, res, next) => {
     if (existingProduct) {
       return res.status(400).json({ message: "Product already exists." });
     }
-   } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
-};
+  
 
     const newProduct = new Product({
       name: name.trim(),
