@@ -4,7 +4,7 @@ const Product = require("../models/productSchema");
 // check decreaseProductQuantity, removeProductFromCart, updateCart
 exports.addProductToCart = async (req, res, next) => {
 
-    const userId = req.userId;
+const userId = req.userId;
     const { qrCode } = req.body;
 
     if (!qrCode) {
