@@ -83,7 +83,7 @@ exports.getAllProducts = async (req, res) => {
     const total = await Product.countDocuments(filter);
     const totalPages = Math.ceil(total / limit);
     let sortOption = {};
-    if (sort === "asc") {
+    if (sort === "asc") { 
       sortOption.price = 1;
     } else if (sort === "desc") {
       sortOption.price = -1;
