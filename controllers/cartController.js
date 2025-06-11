@@ -5,14 +5,14 @@ const Product = require("../models/productSchema");
 exports.addProductToCart = async (req, res, next) => {
 
     const userId = req.userId;
-    const { qrCodeData } = req.body;
+    const { qrCode } = req.body;
 
-    if (!qrCodeData) {
-      return res.status(400).json({ message: " qrCodeData required" });
+    if (!qrCode) {
+      return res.status(400).json({ message: " QR required" });
     }
 try {
     
-      const product= await Product.findOne({qrCodeData});
+      const product= await Product.findOne({qrCode});
       if(!product){
         return res.status(400).json({ message: " Product not found " });
       }
