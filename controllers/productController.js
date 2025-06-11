@@ -1,7 +1,7 @@
 const Product = require("../models/productSchema");
 
 exports.createProduct = async (req, res, next) => {
-  try {
+  try { 
     const { name, description, price, category, stock, qrCode, sizes } =
       req.body;
     const imageUrl = req.file ? req.file.filename : null;
