@@ -19,7 +19,7 @@ try {
 
     let cart = await Cart.findOne({ userId });
     if (!cart) {
-      cart = new Cart({ userId, items: [{ product: product._id, quantity: 1  }] });
+      cart = new Cart({ userId, items: [{ productId: product._id, quantity: 1  }] });
     }
 
     const itemIndex = cart.items.findIndex(
