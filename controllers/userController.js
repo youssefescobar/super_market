@@ -35,7 +35,7 @@ exports.getUser = async (req,res,next) => {
 
         }
         res.json(users);
-
+ 
        
     } catch (error) {
         res.status(500).json({message:error.message});
@@ -45,16 +45,22 @@ exports.getUser = async (req,res,next) => {
 
 exports.updateUser = async(req, res ,next )=>{
     try {
+        const updateData= { ...req.body };
+        if(updateData.password){
+           updateData.password = await bcrypt.hash(updateData.password.trim(), 10);
+
+        }
         const updatedUser= await User.findByIdAndUpdate(
             req.params.id,
-            req.body,
+            updateData,
             {new:true,runValidators:true}
         );
+
         if(!updatedUser){
             return res.status(404).json({ message: "User not found" });
         }
-        res.status(201).json({message:"User updated successfully"});
-      
+        res.status(201).json({message:"User updated successfully", updateData }  );
+       
 
        
     } catch (error) {

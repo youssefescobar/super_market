@@ -6,7 +6,7 @@ exports.createCategory = async (req,res)=>{
      const image = req.file ? req.file.filename : null;
      const newCategory = new Category ({
         name ,
-        description,
+        description, 
         image
 
      });
@@ -34,17 +34,6 @@ exports.getCategory = async (req,res)=>{
         res.status(500).json({message:err.message});
     }
 };
-
-exports.getAllCategory = async (req,res)=>{
-    try{
-        const categories = await Category.find();
-        res.json(categories);
-    }catch(err){
-        res.status(500).json({message:err.message});
-    }
-};
-
-
 
 
 

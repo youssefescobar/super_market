@@ -3,16 +3,20 @@ const express = require("express");
 const app = express();
 const cors = require('cors');
 const axios = require('axios');
+const path = require('path');
 
 
-const path = require('path'); 
-const seedData =require('./seeds/seed.js');
+// const seedData =require('./seeds/seed.js');
+// const seedUser =require('./seeds/seedUser.js');
+// const cartSeed =require('./seeds/cartSeed.js');
 const mongoose = require("mongoose");
 
 app.use(express.json());
 app.use(cors());
 const error = require("./middleware/error.js");
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+ 
+
 
 
 const PORT = process.env.PORT || 3000;
@@ -24,8 +28,9 @@ const cartRoutes =require ('./routes/cartRoute.js');
 const authRoutes = require('./routes/auth.js');
 const paymentRoutes = require('./routes/paymentRoute.js');
 const categoryRoutes = require('./routes/categoryRoute.js');
-
-const recommendationRoutes = require('./routes/recommendationRoutes.js')
+ 
+const recommendationRoutes = require('./routes/recommendationRoutes.js');
+const seedCart = require("./seeds/cartSeed.js");
 
 app.use('/api/auth' , authRoutes);
 app.use("/api/users" , userRoutes);
@@ -45,7 +50,9 @@ const connectDB = async () => {
         await mongoose.connect(MONGO_URI, {
         }); 
         console.log(" MongoDB Connected Successfully");
-        // seedData();
+        // seedData();   
+    //    seedUser();
+    // seedCart();
     } catch (error) { 
         console.error(" MongoDB Connection Failed:", error);
         process.exit(1);
