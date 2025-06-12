@@ -4,6 +4,7 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const Payment = require('../models/paymentSchema');
 const QRCode = require('qrcode');
 const Product = require('../models/productSchema');
+const Cart = require('../models/CartSchema');
 
 // 1- Create Stripe PaymentIntent and Payment record
 exports.createStripePayment = async (req, res) => {
