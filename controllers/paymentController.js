@@ -7,65 +7,52 @@ const Product = require('../models/productSchema');
 
 // 1- Create Stripe PaymentIntent and Payment record
 exports.createStripePayment = async (req, res) => {
-    try {
-      const { userId, products } = req.body;
-  
-      if (!userId || !products || products.length === 0) {
-        return res.status(400).json({ message: 'Missing payment details' });
-      }
-  
-      // 1. Calculate totalAmount
-      let totalAmount = 0;
-      const detailedProducts = [];    
-  
-      // Loop through each product and fetch from database
-      for (const item of products) {
-        const productId = item.productId;
-  
-        if (!productId) {
-          return res.status(400).json({ message: 'Product ID is missing in the request body' });
-        }
-  
-        const product = await Product.findById(productId);
-  
-        if (!product) {
-          return res.status(404).json({ message: `Product with ID ${productId} not found` });
-        }
-  
-        totalAmount += product.price * item.quantity;
-  
-        detailedProducts.push({
-          product: product._id,
-          quantity: item.quantity,
-        });
-      }
-  
-      // 2. Create Stripe PaymentIntent
-      const paymentIntent = await stripe.paymentIntents.create({
-        amount: totalAmount * 100, // Stripe uses cents
-        currency: 'usd',
-        payment_method_types: ['card'],
-      });
-  
-      // 3. Create Payment record
-      const payment = await Payment.create({
-        user: userId,
-        products: detailedProducts,
-        totalAmount,
-        stripePaymentIntentId: paymentIntent.id,
-        paymentStatus: 'pending',
-      });
-  
-      res.status(200).json({
-        clientSecret: paymentIntent.client_secret,
-        paymentId: payment._id,
-      });
-  
-    } catch (error) {
-      console.error('Stripe Payment Error:', error);
-      res.status(500).json({ message: 'Payment failed', error: error.message });
+  try {
+    const { userId, cartId } = req.body;
+
+    if (!userId || !cartId) {
+      return res.status(400).json({ message: 'Missing userId or cartId' });
     }
-  };
+
+    // 1. Fetch cart details from DB
+    const cart = await Cart.findById(cartId).populate('items.product');
+    
+    if (!cart || cart.items.length === 0) {
+      return res.status(404).json({ message: 'Cart not found or empty' });
+    }
+
+    // 2. Calculate total amount
+    let totalAmount = 0;
+    for (const item of cart.items) {
+      totalAmount += item.product.price * item.quantity;
+    }
+
+    // 3. Create Stripe PaymentIntent
+    const paymentIntent = await stripe.paymentIntents.create({
+      amount: totalAmount * 100, // Stripe uses cents
+      currency: 'usd',
+      payment_method_types: ['card'],
+    });
+
+    // 4. Create Payment record with cartId reference
+    const payment = await Payment.create({
+      user: userId,
+      cart: cart._id,
+      totalAmount,
+      stripePaymentIntentId: paymentIntent.id,
+      paymentStatus: 'pending',
+    });
+
+    res.status(200).json({
+      clientSecret: paymentIntent.client_secret,
+      paymentId: payment._id,
+    });
+
+  } catch (error) {
+    console.error('Stripe Payment Error:', error);
+    res.status(500).json({ message: 'Payment failed', error: error.message });
+  }
+};
 
 
 // 2- Confirm Payment after success
