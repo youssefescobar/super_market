@@ -1,7 +1,7 @@
 const Product = require("../models/productSchema");
 
 exports.createProduct = async (req, res, next) => {
-  try {
+  try { 
     const { name, description, price, category, stock, qrCode, sizes } =
       req.body;
     const imageUrl = req.file ? req.file.filename : null;
@@ -10,6 +10,7 @@ exports.createProduct = async (req, res, next) => {
     if (existingProduct) {
       return res.status(400).json({ message: "Product already exists." });
     }
+  
 
     const newProduct = new Product({
       name: name.trim(),
@@ -111,7 +112,7 @@ exports.getAllProducts = async (req, res) => {
     const total = await Product.countDocuments(filter);
     const totalPages = Math.ceil(total / limit);
     let sortOption = {};
-    if (sort === "asc") {
+    if (sort === "asc") { 
       sortOption.price = 1;
     } else if (sort === "desc") {
       sortOption.price = -1;

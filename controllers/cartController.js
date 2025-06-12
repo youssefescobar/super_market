@@ -3,37 +3,44 @@ const Product = require("../models/productSchema");
 
 // check decreaseProductQuantity, removeProductFromCart, updateCart
 exports.addProductToCart = async (req, res, next) => {
-  try {
-    const userId = req.user.id;
-    const { productId, quantity } = req.body;
 
-    if (!productId || !quantity) {
-      return res.status(400).json({ message: "Missing productId or quantity" });
+const userId = req.userId;
+    const { qrCode } = req.body;
+
+    if (!qrCode) {
+      return res.status(400).json({ message: " QR required" });
     }
+try {
+    
+      const product= await Product.findOne({qrCode});
+      if(!product){
+        return res.status(400).json({ message: " Product not found " });
+      }
 
     let cart = await Cart.findOne({ userId });
     if (!cart) {
-      cart = await Cart.create({ userId, items: [] });
+      cart = new Cart({ userId, items: [{ productId: product._id, quantity: 1  }] });
     }
 
     const itemIndex = cart.items.findIndex(
-      (item) => item.productId.toString() === productId
+      (item) => item.productId.toString() ===  product._id.toString()
     );
 
     if (itemIndex > -1) {
       // Update quantity
-      cart.items[itemIndex].quantity += quantity;
+        cart.items[itemIndex].quantity += 1;
     } else {
       // Add new product to cart
-      cart.items.push({ productId, quantity });
+        cart.items.push({ productId: product._id, quantity: 1 });
     }
 
     await cart.save();
 
     return res.status(201).json({
-      message: "Product added to cart successfully",
+      message: "Product added to cart ",
       cart,
     });
+
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
