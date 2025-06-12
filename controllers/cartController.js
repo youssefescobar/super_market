@@ -59,7 +59,7 @@ exports.getMyCart = async (req, res) => {
     const totalQuantity = cart.items.reduce((acc, i) => acc + i.quantity, 0);
     const totalPrice = cart.items.reduce(
       (acc, i) => acc + i.productId.price * i.quantity,
-      0
+      0 
     );
 
     res.status(200).json({ cart, totalQuantity, totalPrice });
