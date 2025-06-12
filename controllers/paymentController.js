@@ -25,7 +25,7 @@ exports.createStripePayment = async (req, res) => {
     // 2. Calculate total amount
     let totalAmount = 0;
     for (const item of cart.items) {
-      totalAmount += item.product.price * item.quantity;
+      totalAmount += item.Product.price * item.quantity;
     }
 
     // 3. Create Stripe PaymentIntent
