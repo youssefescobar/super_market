@@ -16,7 +16,7 @@ exports.createStripePayment = async (req, res) => {
     }
 
     // 1. Fetch cart details from DB
-    const cart = await Cart.findById(cartId).populate('items.product');
+    const cart = await Cart.findById(cartId).populate('items.productId');
     
     if (!cart || cart.items.length === 0) {
       return res.status(404).json({ message: 'Cart not found or empty' });
