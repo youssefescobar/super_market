@@ -16,7 +16,7 @@ exports.createStripePayment = async (req, res) => {
     }
 
     // 1. Fetch cart details from DB
-    const cart = await Cart.findById(cartId).populate('items.productId');
+const cart = await Cart.findById(cartId).populate('items.productId'); 
     
     if (!cart || cart.items.length === 0) {
       return res.status(404).json({ message: 'Cart not found or empty' });
@@ -24,8 +24,8 @@ exports.createStripePayment = async (req, res) => {
 
     // 2. Calculate total amount
     let totalAmount = 0;
-    for (const item of Cart.items) {
-      totalAmount += item.Product.price * item.quantity;
+    for (const item of cart.items) {
+      totalAmount += item.productId.price * item.quantity;
     }
 
     // 3. Create Stripe PaymentIntent
