@@ -7,8 +7,9 @@ const QRCode = require('qrcode');
         "name": "Rich bake Lebanese Bread, 20cm",
         "description": "Lebanese bread perfect for wraps",
         "price": 13.95,
+      
         "category": "Bakery",
-        "imageUrl": "https://images.app.goo.gl/ysCuabKbPysRBuCX9",
+        "imageUrl": "https://richbake.com/wp-content/uploads/2023/03/Lebanese-Bread-Mockup-min-1024x1024.png",
         "stock": 130,
         "sizes": [
             {
@@ -23,7 +24,7 @@ const QRCode = require('qrcode');
         "description": "Lebanese bread perfect for wraps",
         "price": 17.95,
         "category": "Bakery",
-        "imageUrl": "https://images.app.goo.gl/ysCuabKbPysRBuCX9",
+        "imageUrl": "https://richbake.com/wp-content/uploads/2023/03/Lebanese-Bread-Mockup-min-1024x1024.png",
         "stock": 90,
         "sizes": [
             {
@@ -38,7 +39,7 @@ const QRCode = require('qrcode');
         "description": "This chewy brown bread is perfect for your everyday sandwiches for a healthier option",
         "price": 45.45,
         "category": "Bakery",
-        "imageUrl": "https://images.app.goo.gl/S8UXg3YfDpshoNFD6",
+        "imageUrl": "https://richbake.com/wp-content/uploads/2023/03/white-toast-min-1086x1536.png",
         "stock": 120,
         "sizes": [
             {
@@ -53,7 +54,7 @@ const QRCode = require('qrcode');
         "description": "This toast is perfect for your everyday sandwiches for a healthier option",
         "price": 59.95,
         "category": "Bakery",
-        "imageUrl": "https://images.app.goo.gl/NDF4FjyUEApg61w77",
+        "imageUrl": "https://gourmetegypt.com/media/catalog/product/6/2/6223003192037.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
         "stock": 120,
         "sizes": [
             {
@@ -68,7 +69,7 @@ const QRCode = require('qrcode');
         "description": "This toast is perfect for your everyday sandwiches for a healthier option",
         "price": 47.95,
         "category": "Bakery",
-        "imageUrl": "https://images.app.goo.gl/4fPJh9rAxWzpvK3h7",
+        "imageUrl": "https://images.deliveryhero.io/image/darkstores-eg/EGY_6223000430132.jpg",
         "stock": 120,
         "sizes": [
             {
@@ -83,7 +84,7 @@ const QRCode = require('qrcode');
         "description": "brown bread contains wheat bran, wheat bran contains more protine than white flour",
         "price": 59.95,
         "category": "Bakery",
-        "imageUrl": "https://images.app.goo.gl/taRR7zcsjPiDG5oT7",
+        "imageUrl": "https://richbake.com/wp-content/uploads/2023/03/multi-grain-min-1086x1536.png",
         "stock": 80,
         "sizes": [
             {
@@ -98,7 +99,7 @@ const QRCode = require('qrcode');
         "description": "The freshness of the bread reflects in its delicious taste, this bread can be served with various foods",
         "price": 22.45,
         "category": "Bakery",
-        "imageUrl": "https://images.app.goo.gl/UmnCHKzBAkqjVoNL8",
+        "imageUrl": "https://images.deliveryhero.io/image/product-information-management/67b1cdca142e4a60101c7efc.JPG?size=520",
         "stock": 70,
         "sizes": [
             {
@@ -113,7 +114,7 @@ const QRCode = require('qrcode');
         "description": "Looking for a delicious and easy breakfast? Breadway Milk toast is high in protine, fats and fibers",
         "price": 44.95,
         "category": "Bakery",
-        "imageUrl": "https://images.app.goo.gl/4mruYrRG7iQWEGGy8",
+        "imageUrl": "https://images.deliveryhero.io/image/darkstores-eg/EGY_6223007290012.JPG",
         "stock": 70,
         "sizes": [
             {
@@ -128,7 +129,7 @@ const QRCode = require('qrcode');
         "description": "Made from top-quality ingredients",
         "price": 54.95,
         "category": "Bakery",
-        "imageUrl": "https://images.app.goo.gl/AjhXuSUczb7y4Xtk6",
+        "imageUrl": "https://gourmetegypt.com/media/catalog/product/6/2/6223007290081-.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
         "stock": 110,
         "sizes": [
             {
@@ -143,7 +144,7 @@ const QRCode = require('qrcode');
         "description": "Breadway Multigrain Toast is a real baked treat!",
         "price": 54.95,
         "category": "Bakery",
-        "imageUrl": "https://images.app.goo.gl/1V2gngYQnDdip5Ja7",
+        "imageUrl": "https://gourmetegypt.com/media/catalog/product/6/2/6223007290074_na18x58e1vrqhvwf.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:7",
         "stock": 100,
         "sizes": [
             {
@@ -158,7 +159,7 @@ const QRCode = require('qrcode');
         "description": "It is all what you need for perfect burger sandwich",
         "price": 24.95,
         "category": "Bakery",
-        "imageUrl": "https://images.app.goo.gl/iSAp7UHQr8nzrFSQ8",
+        "imageUrl": "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/6/2/6223000431009_225g.jpg",
         "stock": 100,
         "sizes": [
             {
@@ -173,7 +174,7 @@ const QRCode = require('qrcode');
         "description": "Can be used to create a variety of food and snacks",
         "price": 34.95,
         "category": "Bakery",
-        "imageUrl": "https://images.app.goo.gl/zeAMcTWRDjScWdEH8",
+        "imageUrl": "https://cdn.mafrservices.com/pim-content/EGY/media/product/651476/1742809203/651476_main.jpg?im=Resize=1700",
         "stock": 95,
         "sizes": [
             {
@@ -188,7 +189,7 @@ const QRCode = require('qrcode');
         "description": "Fine bread crumbs perfect for your fried or oven baked creations",
         "price": 22.95,
         "category": "Bakery",
-        "imageUrl": "https://images.app.goo.gl/GPSMTWyzkDqbKn7s6",
+        "imageUrl": "https://metro-website-images.s3.eu-west-1.amazonaws.com/products/AD00585.jpg",
         "stock": 90,
         "sizes": [
             {
@@ -203,7 +204,7 @@ const QRCode = require('qrcode');
         "description": "Fine bread crumbs perfect for your fried or oven baked creations",
         "price": 12.95,
         "category": "Bakery",
-        "imageUrl": "https://images.app.goo.gl/GPSMTWyzkDqbKn7s6",
+        "imageUrl": "https://metro-website-images.s3.eu-west-1.amazonaws.com/products/AD00585.jpg",
         "stock": 90,
         "sizes": [
             {
@@ -218,7 +219,7 @@ const QRCode = require('qrcode');
         "description": "Best ingredients for a better pane dish",
         "price": 44.95,
         "category": "Bakery",
-        "imageUrl": "https://images.app.goo.gl/x2gy8D97tqbCAS6q6",
+        "imageUrl": "https://images.deliveryhero.io/image/darkstores-eg/EGY_6223000433126.jpg",
         "stock": 90,
         "sizes": [
             {
@@ -233,7 +234,7 @@ const QRCode = require('qrcode');
         "description": "Spicy breading mix offers amazing taste",
         "price": 44.95,
         "category": "Bakery",
-        "imageUrl": "https://images.app.goo.gl/qrSQNrd7BSZJyAgr6",
+        "imageUrl": "https://images.deliveryhero.io/image/darkstores-eg/EGY_6223000433096.jpg",
         "stock": 60,
         "sizes": [
             {
@@ -248,7 +249,7 @@ const QRCode = require('qrcode');
         "description": "Best ingredients for a better pane dish",
         "price": 44.95,
         "category": "Bakery",
-        "imageUrl": "https://images.app.goo.gl/QyKBJKy3urF2caKs9",
+        "imageUrl": "https://images.deliveryhero.io/image/darkstores-eg/EGY_6223000433089.jpg",
         "stock": 60,
         "sizes": [
             {
@@ -263,7 +264,7 @@ const QRCode = require('qrcode');
         "description": "Traditional egyptain sweet perfect for festive occasions and everyday indulgence",
         "price": 355.0,
         "category": "Bakery",
-        "imageUrl": "https://images.app.goo.gl/6AduUB5i9SkPt7nC7",
+        "imageUrl": "https://m.media-amazon.com/images/I/51vUmoyOcdL._AC_SX679_.jpg",
         "stock": 30,
         "sizes": [
             {
@@ -278,7 +279,7 @@ const QRCode = require('qrcode');
         "description": "Traditional egyptain sweet with dates perfect for festive occasions and everyday indulgence",
         "price": 329.5,
         "category": "Bakery",
-        "imageUrl": "https://images.app.goo.gl/mBQFnRDo19CnwQxk7",
+        "imageUrl": "https://m.media-amazon.com/images/I/51cigd91oLL._AC_SX679_.jpg",
         "stock": 30,
         "sizes": [
             {
@@ -293,7 +294,7 @@ const QRCode = require('qrcode');
         "description": "Croissant",
         "price": 15.0,
         "category": "Bakery",
-        "imageUrl": "https://images.app.goo.gl/1UBPWkgfUxrvmfaj8",
+        "imageUrl": "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/6/2/6223000497852_magnum-mix---choco.jpg",
         "stock": 30,
         "sizes": [
             {
@@ -308,7 +309,7 @@ const QRCode = require('qrcode');
         "description": "Croissant",
         "price": 15.0,
         "category": "Bakery",
-        "imageUrl": "https://images.app.goo.gl/UbAosV5XK215JUiM9",
+        "imageUrl": "https://edita.com.eg/wp-content/uploads/2023/01/Magnum-mix-straw.png",
         "stock": 60,
         "sizes": [
             {
@@ -323,7 +324,7 @@ const QRCode = require('qrcode');
         "description": "Croissant",
         "price": 15.0,
         "category": "Bakery",
-        "imageUrl": "https://images.app.goo.gl/K1APadVzec7ayz9MA",
+        "imageUrl": "https://erposcar.msol.dev/focus/products/6223000497890.webp",
         "stock": 60,
         "sizes": [
             {
@@ -338,7 +339,7 @@ const QRCode = require('qrcode');
         "description": "Jumbo Sandwich",
         "price": 9.5,
         "category": "Bakery",
-        "imageUrl": "https://images.app.goo.gl/vA3zKqyc7Xh93skx5",
+        "imageUrl": "https://images.deliveryhero.io/image/product-information-management/6809fbe55e0c1a06eedb662d.JPG?size=520",
         "stock": 80,
         "sizes": [
             {
@@ -353,7 +354,7 @@ const QRCode = require('qrcode');
         "description": "Jumbo Sandwich",
         "price": 9.5,
         "category": "Bakery",
-        "imageUrl": "https://images.app.goo.gl/UZrjgWtMHZ5J9RZr8",
+        "imageUrl": "https://images.deliveryhero.io/image/product-information-management/6809fbe65e0c1a06eedb662f.JPG",
         "stock": 80,
         "sizes": [
             {
@@ -368,7 +369,7 @@ const QRCode = require('qrcode');
         "description": "Croissant",
         "price": 11.95,
         "category": "Bakery",
-        "imageUrl": "https://images.app.goo.gl/NyV4GYTyYPLMJPTZ8",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDRcX2-ymZiHgg1VxVFubJr65qA9cxPHEKhDIwNDvXe7L9j637XhlIZoAIqzFGyfmP1hE&usqp=CAU",
         "stock": 60,
         "sizes": [
             {
@@ -383,7 +384,7 @@ const QRCode = require('qrcode');
         "description": "Jumbo Sandwich",
         "price": 9.5,
         "category": "Bakery",
-        "imageUrl": "https://images.app.goo.gl/qW5m9VVmRADoRKcq6",
+        "imageUrl": "https://images.deliveryhero.io/image/product-information-management/6809fbe95e0c1a06eedb6635.JPG",
         "stock": 80,
         "sizes": [
             {
@@ -398,7 +399,7 @@ const QRCode = require('qrcode');
         "description": "Jumbo Sandwich",
         "price": 9.5,
         "category": "Bakery",
-        "imageUrl": "https://images.app.goo.gl/jRG4ewjnaPcS5tyT8",
+        "imageUrl": "https://images.deliveryhero.io/image/product-information-management/6809fbe75e0c1a06eedb6631.JPG",
         "stock": 70,
         "sizes": [
             {
@@ -413,7 +414,7 @@ const QRCode = require('qrcode');
         "description": "Pure Water",
         "price": 9.45,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/kM94Wj2B2GfSHJ2J7",
+        "imageUrl": "https://images.deliveryhero.io/image/darkstores-eg/EGY_6225000378834.jpg",
         "stock": 120,
         "sizes": [
             {
@@ -428,7 +429,7 @@ const QRCode = require('qrcode');
         "description": "Pure Water",
         "price": 6.25,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/kM94Wj2B2GfSHJ2J7",
+        "imageUrl": "https://images.deliveryhero.io/image/darkstores-eg/EGY_6225000378834.jpg",
         "stock": 120,
         "sizes": [
             {
@@ -443,7 +444,7 @@ const QRCode = require('qrcode');
         "description": "Anti-stress & immune booster, enriched with vitamins B1 & B12",
         "price": 15.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/A93Cg21aWi698Un8A",
+        "imageUrl": "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/6/2/6224011241106_300ml.jpg",
         "stock": 90,
         "sizes": [
             {
@@ -458,7 +459,7 @@ const QRCode = require('qrcode');
         "description": "Enriched with vitamins D",
         "price": 15.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/hvbDqhTAXyCNChT96",
+        "imageUrl": "https://cittamart.com/wp-content/uploads/2023/11/V7-Vitamin-Sparkling-Drink-Pinacolada-300-ML-1-300x300.webp",
         "stock": 90,
         "sizes": [
             {
@@ -473,7 +474,7 @@ const QRCode = require('qrcode');
         "description": "Anti-oxidant & immune booster, enriched with vitamins B1 & B12",
         "price": 15.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/AZajvm479ihHge7Z8",
+        "imageUrl": "https://gourmetegypt.com/media/catalog/product/6/2/6224011241083_vykhafr1l3vqldof.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=350&width=350&canvas=350:350",
         "stock": 90,
         "sizes": [
             {
@@ -488,7 +489,7 @@ const QRCode = require('qrcode');
         "description": "Super soda",
         "price": 15.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/9sRLYsPPwtCAqEgx6",
+        "imageUrl": "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/6/2/6224011241519d300ml.jpg",
         "stock": 90,
         "sizes": [
             {
@@ -503,7 +504,7 @@ const QRCode = require('qrcode');
         "description": "Super soda",
         "price": 15.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/rJDFnZs4ZYcNvAMi6",
+        "imageUrl": "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/6/2/6224011241427-300ml.jpg",
         "stock": 90,
         "sizes": [
             {
@@ -518,7 +519,7 @@ const QRCode = require('qrcode');
         "description": "Super soda",
         "price": 15.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/quX1naG3Atsb6CkW8",
+        "imageUrl": "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/6/2/6224011241366-300ml.jpg",
         "stock": 90,
         "sizes": [
             {
@@ -533,7 +534,7 @@ const QRCode = require('qrcode');
         "description": "Soda",
         "price": 11.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/SNjEu9zp6hPaMrgt9",
+        "imageUrl": "https://images.deliveryhero.io/image/product-information-management/67598b9a4f3029deb25d9818.jpg?size=520",
         "stock": 50,
         "sizes": [
             {
@@ -548,7 +549,7 @@ const QRCode = require('qrcode');
         "description": "Soda",
         "price": 11.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/p4G3U9bVVdiyWpwK7",
+        "imageUrl": "https://spirospathis.com/wp-content/uploads/2023/08/Pineapple-Transparent.png",
         "stock": 50,
         "sizes": [
             {
@@ -563,7 +564,7 @@ const QRCode = require('qrcode');
         "description": "Soda",
         "price": 11.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/rSQm2CWRMgHE6tFL8",
+        "imageUrl": "https://spirospathis.com/wp-content/uploads/2023/08/Apple-Transparent.png",
         "stock": 50,
         "sizes": [
             {
@@ -578,7 +579,7 @@ const QRCode = require('qrcode');
         "description": "Soda",
         "price": 11.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/xMtTcpKQS3nEaKFo8",
+        "imageUrl": "https://spirospathis.com/wp-content/uploads/2023/08/Grape-Transparent.png",
         "stock": 50,
         "sizes": [
             {
@@ -593,7 +594,7 @@ const QRCode = require('qrcode');
         "description": "Soda",
         "price": 11.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/opSS1WZrLbfFt5wi6",
+        "imageUrl": "https://img.freepik.com/premium-psd/spiro-spathis-bottle-png-mandarine_921584-5.jpg",
         "stock": 50,
         "sizes": [
             {
@@ -608,7 +609,7 @@ const QRCode = require('qrcode');
         "description": "Soda",
         "price": 11.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/oXb23oFS5N1FcAGUA",
+        "imageUrl": "https://spirospathis.com/wp-content/uploads/2023/08/Peach-Transparent.png",
         "stock": 50,
         "sizes": [
             {
@@ -623,7 +624,7 @@ const QRCode = require('qrcode');
         "description": "Soda",
         "price": 11.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/tPihHV3c6nqwnf9U6",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7z58kmMs9NHjh2F8k_AK09vDlJH5PmhxSHAZy58f8CWAqIkNzu2w3ciw2IYDIybJAVv8&usqp=CAU",
         "stock": 50,
         "sizes": [
             {
@@ -638,7 +639,7 @@ const QRCode = require('qrcode');
         "description": "Soda Can",
         "price": 18.75,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/Z4mkjcEHJRsvFU5j7",
+        "imageUrl": "https://portal.elsupplier.com/backend/public/storage/products/images/6224008082262617931978.jpeg",
         "stock": 80,
         "sizes": [
             {
@@ -653,7 +654,7 @@ const QRCode = require('qrcode');
         "description": "Soda Can",
         "price": 18.75,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/RdUWfEdUT2mPDdjaA",
+        "imageUrl": "https://portal.elsupplier.com/backend/public/storage/products/images/6224008082262617931978.jpeg",
         "stock": 80,
         "sizes": [
             {
@@ -668,7 +669,7 @@ const QRCode = require('qrcode');
         "description": "Soda Can",
         "price": 18.75,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/zwUK422VyCDE3wY8A",
+        "imageUrl": "https://cdn.mafrservices.com/pim-content/EGY/media/product/642902/1730986205/642902_main.jpg",
         "stock": 80,
         "sizes": [
             {
@@ -683,7 +684,7 @@ const QRCode = require('qrcode');
         "description": "Soda Can",
         "price": 18.75,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/urBotrMqepUJP4HEA",
+        "imageUrl": "https://images.deliveryhero.io/image/product-information-management/672736d01beefab9db05ff0a.JPG",
         "stock": 80,
         "sizes": [
             {
@@ -698,7 +699,7 @@ const QRCode = require('qrcode');
         "description": "Soda Can",
         "price": 18.75,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/ncE3naknyQVcgbxB8",
+        "imageUrl": "https://cdn.mafrservices.com/pim-content/EGY/media/product/642903/1730986205/642903_main.jpg",
         "stock": 80,
         "sizes": [
             {
@@ -713,7 +714,7 @@ const QRCode = require('qrcode');
         "description": "Soft drink bottle",
         "price": 17.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/ppzBDPZXaZ2oDwVp6",
+        "imageUrl": "https://m.media-amazon.com/images/I/31i4u2WqtIL._AC_.jpg",
         "stock": 80,
         "sizes": [
             {
@@ -728,7 +729,7 @@ const QRCode = require('qrcode');
         "description": "Soft drink bottle",
         "price": 17.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/FtcUHzUJVVJR3pY86",
+        "imageUrl": "https://m.media-amazon.com/images/I/31i4u2WqtIL._AC_.jpg",
         "stock": 90,
         "sizes": [
             {
@@ -743,7 +744,7 @@ const QRCode = require('qrcode');
         "description": "Soft drink bottle",
         "price": 17.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/mPxYH48MDj9vhEBh9",
+        "imageUrl": "http://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRchkrZuB4ij0MWHmWTusZ2j0yTVjekG_osUKVPrHYRTi9w-L0KPs2hBhit4hpKzj3Fhw0&usqp=CAU",
         "stock": 90,
         "sizes": [
             {
@@ -758,7 +759,7 @@ const QRCode = require('qrcode');
         "description": "Soft drink bottle",
         "price": 17.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/KmXBKSoysdKA5wgs8",
+        "imageUrl": "https://alkhan-mart.com/images/thumbs/0001827_-275-_450.jpeg",
         "stock": 90,
         "sizes": [
             {
@@ -773,7 +774,7 @@ const QRCode = require('qrcode');
         "description": "Soft drink bottle",
         "price": 17.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/tcpHSPHyYoMCpbS47",
+        "imageUrl": "https://img.ananinja.com/media/bra-public-files/services-admin/files/57074c3b-6ec8-46c3-921a-53d01976e094?w=1920&q=75",
         "stock": 90,
         "sizes": [
             {
@@ -788,7 +789,7 @@ const QRCode = require('qrcode');
         "description": "Soft drink bottle",
         "price": 17.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/QtiwR1ysb9DFdu998",
+        "imageUrl": "https://gourmetegypt.com/media/catalog/product/6/2/6224008082101.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
         "stock": 90,
         "sizes": [
             {
@@ -803,7 +804,7 @@ const QRCode = require('qrcode');
         "description": "Energy drink Special formula, Regular",
         "price": 50.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/GnD1y1sEW8aqTRqi8",
+        "imageUrl": "https://cdn.mafrservices.com/pim-content/EGY/media/product/218919/1735050603/218919_main.jpg",
         "stock": 90,
         "sizes": [
             {
@@ -818,7 +819,7 @@ const QRCode = require('qrcode');
         "description": "Energy drink Special formula, Sugar free",
         "price": 50.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/QRyUp98NofU4VRJT6",
+        "imageUrl": "https://cdn.mafrservices.com/pim-content/EGY/media/product/440021/1735050603/440021_main.jpg",
         "stock": 90,
         "sizes": [
             {
@@ -833,7 +834,7 @@ const QRCode = require('qrcode');
         "description": "Energy drink Special formula, White edition",
         "price": 50.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/dZjuKL2AnajYMSkk8",
+        "imageUrl": "https://cheersegypt.com/wp-content/uploads/2023/11/Redbull-White.jpg",
         "stock": 90,
         "sizes": [
             {
@@ -848,7 +849,7 @@ const QRCode = require('qrcode');
         "description": "Energy drink Special formula, Pink edition",
         "price": 50.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/Ek7HwczCHRbssSqk6",
+        "imageUrl": "https://cdn.mafrservices.com/pim-content/EGY/media/product/652006/1743931803/652006_main.jpg?im=Resize=480",
         "stock": 90,
         "sizes": [
             {
@@ -863,7 +864,7 @@ const QRCode = require('qrcode');
         "description": "Energy drink Special formula, Purple edition",
         "price": 50.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/tbicWaVjAwSyDfyF6",
+        "imageUrl": "https://cheersegypt.com/wp-content/uploads/2023/11/Redbull-Purple.jpg",
         "stock": 90,
         "sizes": [
             {
@@ -878,7 +879,7 @@ const QRCode = require('qrcode');
         "description": "Energy drink Special formula, Blue edition",
         "price": 50.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/4n6NycadE3QMkVfw9",
+        "imageUrl": "https://cdn.mafrservices.com/pim-content/EGY/media/product/633142/1735050603/633142_main.jpg",
         "stock": 90,
         "sizes": [
             {
@@ -893,7 +894,7 @@ const QRCode = require('qrcode');
         "description": "Energy drink Special formula, Green edition",
         "price": 50.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/Fak9zyGDPKVgNoJZ6",
+        "imageUrl": "https://cdn.mafrservices.com/pim-content/EGY/media/product/642721/1735050603/642721_main.jpg?im=Resize=480",
         "stock": 90,
         "sizes": [
             {
@@ -908,7 +909,7 @@ const QRCode = require('qrcode');
         "description": "Healthy juice",
         "price": 9.5,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/8bYCFqzLSja6H2R29",
+        "imageUrl": "https://m.media-amazon.com/images/I/61TXDoMVm0L._AC_SX679_.jpg",
         "stock": 70,
         "sizes": [
             {
@@ -923,7 +924,7 @@ const QRCode = require('qrcode');
         "description": "Healthy juice",
         "price": 34.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/97KdtzALvQky8LXx7",
+        "imageUrl": "https://gourmetegypt.com/media/catalog/product/_/6/_6222014336133-.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=&width=",
         "stock": 50,
         "sizes": [
             {
@@ -938,7 +939,7 @@ const QRCode = require('qrcode');
         "description": "Healthy juice",
         "price": 9.5,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/5gYaaXafmDkNDWxk8",
+        "imageUrl": "https://www.juhayna.com/app/uploads/2016/11/1625749562_211_125933_classicappleen.png",
         "stock": 70,
         "sizes": [
             {
@@ -953,7 +954,7 @@ const QRCode = require('qrcode');
         "description": "Healthy juice",
         "price": 34.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/cRc8xGgtsdu9JGaz7",
+        "imageUrl": "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/6/2/6222014336188_3_-.jpg",
         "stock": 50,
         "sizes": [
             {
@@ -968,7 +969,7 @@ const QRCode = require('qrcode');
         "description": "Healthy juice",
         "price": 34.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/Jm1bv8rvW4ojVWKU9",
+        "imageUrl": "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/6/2/6222014330544.jpg",
         "stock": 50,
         "sizes": [
             {
@@ -983,7 +984,7 @@ const QRCode = require('qrcode');
         "description": "Healthy juice",
         "price": 9.5,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/3aPqvMZpVwpomgoQ9",
+        "imageUrl": "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/6/2/6222014330544.jpg",
         "stock": 70,
         "sizes": [
             {
@@ -998,7 +999,7 @@ const QRCode = require('qrcode');
         "description": "Healthy juice",
         "price": 34.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/oxkAdXBFsjqXm1fT9",
+        "imageUrl": "https://m.media-amazon.com/images/I/71NYbQFYycL.__AC_SX300_SY300_QL70_ML2_.jpg",
         "stock": 50,
         "sizes": [
             {
@@ -1013,7 +1014,7 @@ const QRCode = require('qrcode');
         "description": "Healthy juice",
         "price": 9.5,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/thAXy61BPHiZjzbi6",
+        "imageUrl": "https://maxmartonline.com/images/thumbs/0010937_juhayna-cocktail-juice-235ml_510.jpeg",
         "stock": 70,
         "sizes": [
             {
@@ -1028,7 +1029,7 @@ const QRCode = require('qrcode');
         "description": "Healthy juice",
         "price": 34.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/WrZTnuKFEGyY4b5R7",
+        "imageUrl": "https://www.qebox.app/qebox/wp-content/themes/wolmart/assets/images/lazy.png",
         "stock": 50,
         "sizes": [
             {
@@ -1043,7 +1044,7 @@ const QRCode = require('qrcode');
         "description": "Healthy juice",
         "price": 9.5,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/77yNaRhfWF5s8ZUY8",
+        "imageUrl": "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/6/2/6222014330742-235ml-.jpg",
         "stock": 70,
         "sizes": [
             {
@@ -1058,7 +1059,7 @@ const QRCode = require('qrcode');
         "description": "Healthy juice",
         "price": 34.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/Cn6DCgLVsPLXYSA76",
+        "imageUrl": "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/6/2/6222014330742-235ml-.jpg",
         "stock": 50,
         "sizes": [
             {
@@ -1073,7 +1074,7 @@ const QRCode = require('qrcode');
         "description": "Healthy juice",
         "price": 9.5,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/GEHYyPvPMpWKHqth6",
+        "imageUrl": "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/6/2/6222014330742-235ml-.jpg",
         "stock": 70,
         "sizes": [
             {
@@ -1088,7 +1089,7 @@ const QRCode = require('qrcode');
         "description": "Healthy juice",
         "price": 9.5,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/RoNmcSqeJTAGQcfK6",
+        "imageUrl": "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/6/2/6222014330513-.jpg",
         "stock": 70,
         "sizes": [
             {
@@ -1103,7 +1104,7 @@ const QRCode = require('qrcode');
         "description": "Healthy juice",
         "price": 15.95,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/EJhDWJhVLs7rrMpj6",
+        "imageUrl": "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/6/2/6222014332814_1.jpg",
         "stock": 70,
         "sizes": [
             {
@@ -1118,7 +1119,7 @@ const QRCode = require('qrcode');
         "description": "Healthy juice",
         "price": 57.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/HL7Xb1JkTDRi5Aoz8",
+        "imageUrl": "https://images.deliveryhero.io/image/darkstores-eg/EGY_6222014335655.JPG?size=520",
         "stock": 50,
         "sizes": [
             {
@@ -1133,7 +1134,7 @@ const QRCode = require('qrcode');
         "description": "Healthy juice",
         "price": 34.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/YyZLDNsTQfgPguC99",
+        "imageUrl": "https://m.media-amazon.com/images/S/aplus-media/sota/458c318e-66eb-4025-955c-410a48e9ea79.__CR0,0,300,300_PT0_SX300_V1___.jpg",
         "stock": 50,
         "sizes": [
             {
@@ -1148,7 +1149,7 @@ const QRCode = require('qrcode');
         "description": "Refreshing and great taste juice",
         "price": 12.75,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/5zCRCcXHixxVepDL7",
+        "imageUrl": "https://www.qebox.app/qebox/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-30-at-11.30.47-AM.jpeg",
         "stock": 30,
         "sizes": [
             {
@@ -1163,7 +1164,7 @@ const QRCode = require('qrcode');
         "description": "Refreshing and great taste juice",
         "price": 12.75,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/F9jxbv2AcuiEtSqk9",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8yOGuI-ij1W54BTgT44a7zIhfGVyjgwvLu9eW0kMNj1ghn-kHMeeJGUr3wsxDZHI6X7E&usqp=CAU",
         "stock": 30,
         "sizes": [
             {
@@ -1178,7 +1179,7 @@ const QRCode = require('qrcode');
         "description": "Refreshing and great taste juice",
         "price": 12.75,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/xpb4JMxAe6fXUfP67",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkoR4tEIiNniIH2hpGI7H2UNy39kpZ2ykdBHyTfPyLkBW309SnT5B5WqdRalYAWcDoNto&usqp=CAU",
         "stock": 30,
         "sizes": [
             {
@@ -1193,7 +1194,7 @@ const QRCode = require('qrcode');
         "description": "Refreshing and great taste juice",
         "price": 12.75,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/rKmd5XeVNh4aePd39",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkoR4tEIiNniIH2hpGI7H2UNy39kpZ2ykdBHyTfPyLkBW309SnT5B5WqdRalYAWcDoNto&usqp=CAU",
         "stock": 30,
         "sizes": [
             {
@@ -1208,7 +1209,7 @@ const QRCode = require('qrcode');
         "description": "Refreshing and great taste juice",
         "price": 12.75,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/to7TfuaBsTXWJJdGA",
+        "imageUrl": "https://www.suntop.com/wp-content/uploads/sites/4/2019/05/Suntop-250ml-MixedFruit-Leaf-UK-front-_RGB_Merged.png",
         "stock": 30,
         "sizes": [
             {
@@ -1223,7 +1224,7 @@ const QRCode = require('qrcode');
         "description": "Refreshing and great taste juice",
         "price": 12.75,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/9i5tCYyJu2e1PSEh6",
+        "imageUrl": "https://cdn.mafrservices.com/pim-content/EGY/media/product/645014/1733320804/645014_main.jpg",
         "stock": 30,
         "sizes": [
             {
@@ -1238,7 +1239,7 @@ const QRCode = require('qrcode');
         "description": "Refreshing and great taste juice",
         "price": 12.75,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/wVS6SmeqLcKfxdwB9",
+        "imageUrl": "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/6/2/6224008267034_-_250ml_2_.jpg",
         "stock": 30,
         "sizes": [
             {
@@ -1253,7 +1254,7 @@ const QRCode = require('qrcode');
         "description": "Refreshing and great taste juice",
         "price": 12.75,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/pP1dBynUiDpR1SXy8",
+        "imageUrl": "https://cittamart.com/wp-content/uploads/2023/12/Sun-Top-Fruit-Drink-Berry-Mix-250-ML-1-700x700.webp",
         "stock": 30,
         "sizes": [
             {
@@ -1268,7 +1269,7 @@ const QRCode = require('qrcode');
         "description": "Yummy twist and high protein",
         "price": 43.0,
         "category": "Dairy",
-        "imageUrl": "https://images.app.goo.gl/ZvHk7cFSpudiNEJs9",
+        "imageUrl": "https://images.deliveryhero.io/image/darkstores-eg/EGY_6222014353109.JPG",
         "stock": 30,
         "sizes": [
             {
@@ -1283,7 +1284,7 @@ const QRCode = require('qrcode');
         "description": "Yummy twist and high protein",
         "price": 43.0,
         "category": "Dairy",
-        "imageUrl": "https://images.app.goo.gl/Va8bMKuuqRurg89V9",
+        "imageUrl": "https://images.deliveryhero.io/image/darkstores-eg/EGY_6222014353116.JPG",
         "stock": 30,
         "sizes": [
             {
@@ -1298,7 +1299,7 @@ const QRCode = require('qrcode');
         "description": "Yummy twist and high protein",
         "price": 43.0,
         "category": "Dairy",
-        "imageUrl": "https://images.app.goo.gl/ncijVys82xQK2FQ97",
+        "imageUrl": "https://cittamart.com/wp-content/uploads/2024/12/Juhayna-Greek-Yogurt-Peach-180g2.webp",
         "stock": 30,
         "sizes": [
             {
@@ -1313,7 +1314,7 @@ const QRCode = require('qrcode');
         "description": "Yummy twist and high protein",
         "price": 43.0,
         "category": "Dairy",
-        "imageUrl": "https://images.app.goo.gl/TqRL6oHhLw1wrDtj7",
+        "imageUrl": "https://images.deliveryhero.io/image/darkstores-eg/EGY_6222014353147.JPG",
         "stock": 30,
         "sizes": [
             {
@@ -1328,7 +1329,7 @@ const QRCode = require('qrcode');
         "description": "Perfect for bechamel and cheese sauces",
         "price": 58.0,
         "category": "Dairy",
-        "imageUrl": "https://images.app.goo.gl/CfLMJDsDGnQf2mnQ6",
+        "imageUrl": "https://gourmetegypt.com/media/catalog/product/6/2/6223000356326.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
         "stock": 20,
         "sizes": [
             {
@@ -1343,7 +1344,7 @@ const QRCode = require('qrcode');
         "description": "Enrich your diet with smooth and creamy yoghurt",
         "price": 10.0,
         "category": "Dairy",
-        "imageUrl": "https://images.app.goo.gl/bc25PnXwcWXo7a2n8",
+        "imageUrl": "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/6/2/6223000351321d.png",
         "stock": 120,
         "sizes": [
             {
@@ -1358,7 +1359,7 @@ const QRCode = require('qrcode');
         "description": "Easy to whip",
         "price": 240.0,
         "category": "Dairy",
-        "imageUrl": "https://images.app.goo.gl/KN5WaBP4mi1zhKsPA",
+        "imageUrl": "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/6/2/6223000350386-200ml.jpg",
         "stock": 20,
         "sizes": [
             {
@@ -1373,7 +1374,7 @@ const QRCode = require('qrcode');
         "description": "Smooth consistency",
         "price": 24.44,
         "category": "Dairy",
-        "imageUrl": "https://images.app.goo.gl/hBdkZ4dkmYXd5xsY6",
+        "imageUrl": "https://www.domty.org/uploads/products/272585_Domty-TP-Fetadetails.png",
         "stock": 20,
         "sizes": [
             {
@@ -1388,7 +1389,7 @@ const QRCode = require('qrcode');
         "description": "Smooth consistency",
         "price": 14.99,
         "category": "Dairy",
-        "imageUrl": "https://images.app.goo.gl/hBdkZ4dkmYXd5xsY6",
+        "imageUrl": "https://www.domty.org/uploads/products/272585_Domty-TP-Fetadetails.png",
         "stock": 60,
         "sizes": [
             {
@@ -1403,7 +1404,7 @@ const QRCode = require('qrcode');
         "description": "Smooth consistency",
         "price": 24.44,
         "category": "Dairy",
-        "imageUrl": "https://images.app.goo.gl/iJPyE5KbmppwKmbZ9",
+        "imageUrl": "https://images.deliveryhero.io/image/product-information-management/61e911016b08e4d7501d81c8.jpg?size=520",
         "stock": 30,
         "sizes": [
             {
@@ -1418,7 +1419,7 @@ const QRCode = require('qrcode');
         "description": "Smooth consistency",
         "price": 48.94,
         "category": "Dairy",
-        "imageUrl": "https://images.app.goo.gl/fzB1QjiYdFm6q4QY6",
+        "imageUrl": "https://erposcar.msol.dev/focus/products/6223000758878.webp",
         "stock": 30,
         "sizes": [
             {
@@ -1433,7 +1434,7 @@ const QRCode = require('qrcode');
         "description": "Smooth consistency",
         "price": 90.0,
         "category": "Dairy",
-        "imageUrl": "https://images.app.goo.gl/pP8Z5Z6WpwYEmNFh9",
+        "imageUrl": "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/6/2/6223000757550-1kg-----.jpg",
         "stock": 30,
         "sizes": [
             {
@@ -1448,7 +1449,7 @@ const QRCode = require('qrcode');
         "description": "Smooth consistency",
         "price": 114.95,
         "category": "Dairy",
-        "imageUrl": "https://images.app.goo.gl/fordNHomH9XeVFPx9",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy7_ZcqZAjw8GODQTKQNkK06pwKRW8BDK_VuPBSOlLdbZjvs-e25GRMYeiutHgBxD0z9g&usqp=CAU",
         "stock": 30,
         "sizes": [
             {
@@ -1463,7 +1464,7 @@ const QRCode = require('qrcode');
         "description": "Smooth consistency",
         "price": 66.74,
         "category": "Dairy",
-        "imageUrl": "https://images.app.goo.gl/pDWNmrRj6to1GJhW8",
+        "imageUrl": "https://images.deliveryhero.io/image/product-information-management/6811d2f1ccf8140c804d9205.jpg?size=520",
         "stock": 30,
         "sizes": [
             {
@@ -1478,7 +1479,7 @@ const QRCode = require('qrcode');
         "description": "Smooth Spread",
         "price": 99.95,
         "category": "Dairy",
-        "imageUrl": "https://images.app.goo.gl/nfqQ2Sgq3qfdWGtA9",
+        "imageUrl": "https://images.deliveryhero.io/image/product-information-management/679b4ba828332cb7dafeed64.png?size=520",
         "stock": 30,
         "sizes": [
             {
@@ -1493,7 +1494,7 @@ const QRCode = require('qrcode');
         "description": "Spreading, cooking and baking",
         "price": 100.8,
         "category": "Dairy",
-        "imageUrl": "https://images.app.goo.gl/DDxTVy2S2SpYQSjm9",
+        "imageUrl": "https://gourmetegypt.com/media/catalog/product/6/2/6281007033190.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=&width=",
         "stock": 40,
         "sizes": [
             {
@@ -1508,7 +1509,7 @@ const QRCode = require('qrcode');
         "description": "Latte",
         "price": 35.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/PSgu8DSArSw8TBcL8",
+        "imageUrl": "https://gourmetegypt.com/media/catalog/product/8/9/8992696526303.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
         "stock": 30,
         "sizes": [
             {
@@ -1523,7 +1524,7 @@ const QRCode = require('qrcode');
         "description": "Spanish Latte",
         "price": 35.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/4CThgTQTvgcDgS1BA",
+        "imageUrl": "https://www.nescafe.com/mena/sites/default/files/2024-08/SPANISH%20LATTE_0.png",
         "stock": 30,
         "sizes": [
             {
@@ -1538,7 +1539,7 @@ const QRCode = require('qrcode');
         "description": "Cappuccino",
         "price": 35.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/kt3uSUD4XjWSjHi17",
+        "imageUrl": "https://images.deliveryhero.io/image/product-information-management/672cc7bb75e26928dcf59111.jpg",
         "stock": 30,
         "sizes": [
             {
@@ -1553,7 +1554,7 @@ const QRCode = require('qrcode');
         "description": "Mocha",
         "price": 35.0,
         "category": "Beverages",
-        "imageUrl": "https://images.app.goo.gl/S1oixhS5dYEE1aUf7",
+        "imageUrl": "https://media.supermart.ae/16966-large_default/nescafe-mocha-iced-coffee-on-the-go-225ml.jpg",
         "stock": 30,
         "sizes": [
             {
@@ -1568,7 +1569,7 @@ const QRCode = require('qrcode');
         "description": "10 Pieces",
         "price": 10.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/qMEJxK6mXM7fQrZz7",
+        "imageUrl": "https://cdn.mafrservices.com/sys-master-root/h86/h32/49832829419550/412511_main.jpg?im=Resize=480",
         "stock": 40,
         "sizes": [
             {
@@ -1583,7 +1584,7 @@ const QRCode = require('qrcode');
         "description": "10 Pieces",
         "price": 10.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/W69WN9pWDb5Ax1499",
+        "imageUrl": "https://images.deliveryhero.io/image/product-information-management/68050777666794a73198f6f5.jpg?size=520",
         "stock": 40,
         "sizes": [
             {
@@ -1598,7 +1599,7 @@ const QRCode = require('qrcode');
         "description": "8 Pieces",
         "price": 7.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/ozmAnibRJYcHWzM79",
+        "imageUrl": "https://images.deliveryhero.io/image/product-information-management/67050a56d1cc1f1eef0e6073.jpg",
         "stock": 40,
         "sizes": [
             {
@@ -1613,7 +1614,7 @@ const QRCode = require('qrcode');
         "description": "8 Pieces",
         "price": 7.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/PALJ8ku8uRTubQ8A7",
+        "imageUrl": "https://m.media-amazon.com/images/I/61bEqU8kAQL._AC_UF894,1000_QL80_.jpg",
         "stock": 40,
         "sizes": [
             {
@@ -1628,7 +1629,7 @@ const QRCode = require('qrcode');
         "description": "Fluffy texture that melts in your mouth",
         "price": 47.75,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/ATkw3ajxH6VtP6DZ9",
+        "imageUrl": "https://m.media-amazon.com/images/I/51kxdDwERgL.__AC_SX300_SY300_QL70_ML2_.jpg",
         "stock": 20,
         "sizes": [
             {
@@ -1643,7 +1644,7 @@ const QRCode = require('qrcode');
         "description": "Fluffy texture that melts in your mouth",
         "price": 46.25,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/oeBC5qEjWcsMcBB2A",
+        "imageUrl": "https://m.media-amazon.com/images/I/51dAvBwLX-L.__AC_SX300_SY300_QL70_ML2_.jpg",
         "stock": 20,
         "sizes": [
             {
@@ -1658,7 +1659,7 @@ const QRCode = require('qrcode');
         "description": "Fluffy texture that melts in your mouth",
         "price": 50.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/Lyunn5wkFpixdoJF8",
+        "imageUrl": "https://m.media-amazon.com/images/I/511Tf1JGTCL.__AC_SX300_SY300_QL70_ML2_.jpg",
         "stock": 20,
         "sizes": [
             {
@@ -1673,7 +1674,7 @@ const QRCode = require('qrcode');
         "description": "Refreshing and Soothing sensation",
         "price": 10.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/6TxoRkWWVhpLsr626",
+        "imageUrl": "https://cdn.mafrservices.com/sys-master-root/h31/h6f/49727356731422/592198_main.jpg?im=Resize=480",
         "stock": 90,
         "sizes": [
             {
@@ -1688,7 +1689,7 @@ const QRCode = require('qrcode');
         "description": "Refreshing and Soothing sensation",
         "price": 10.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/GNzGM7xHESaQEpc58",
+        "imageUrl": "https://cdn.mafrservices.com/pim-content/EGY/media/product/592196/1742110203/592196_main.jpg?im=Resize=480",
         "stock": 90,
         "sizes": [
             {
@@ -1703,7 +1704,7 @@ const QRCode = require('qrcode');
         "description": "Delicious candies with real fruit juice",
         "price": 36.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/APxEyhKSNNYy2ZEQ7",
+        "imageUrl": "https://www.dubaigrocers.com/cdn/shop/files/be-5fdce5852925d.jpg?v=1719940282&width=1000",
         "stock": 90,
         "sizes": [
             {
@@ -1718,7 +1719,7 @@ const QRCode = require('qrcode');
         "description": "sour bite offers a sweet and sour taste",
         "price": 36.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/rteeM56C35urE9Vv7",
+        "imageUrl": "https://images.deliveryhero.io/image/nv-jo/Dalal%20Taha/MCE-Asnaf%20Askaryeh/8690146658313-removebg-preview.png?size=520",
         "stock": 90,
         "sizes": [
             {
@@ -1733,7 +1734,7 @@ const QRCode = require('qrcode');
         "description": "With fruit flavor",
         "price": 8.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/ZQ8PdMNfwBuVyrzq5",
+        "imageUrl": "https://images.deliveryhero.io/image/product-information-management/67222dcd0e3365ffbc483d79.JPG?size=520",
         "stock": 90,
         "sizes": [
             {
@@ -1748,7 +1749,7 @@ const QRCode = require('qrcode');
         "description": "Wafer bar, 1pc",
         "price": 5.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/8mf5JNYbds7dwVM76",
+        "imageUrl": "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/6/2/6223000498200.jpg",
         "stock": 100,
         "sizes": [
             {
@@ -1763,7 +1764,7 @@ const QRCode = require('qrcode');
         "description": "Chocolate Sticks, 2pc",
         "price": 5.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/bHSVmnBvcwixwFsN9",
+        "imageUrl": "https://images.deliveryhero.io/image/product-information-management/676e5ff9f8fd5beef0b1397e.png?size=520",
         "stock": 100,
         "sizes": [
             {
@@ -1778,7 +1779,7 @@ const QRCode = require('qrcode');
         "description": "Chocolate Sticks, 2pc",
         "price": 10.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/Fgu4xXw4hEb28goi8",
+        "imageUrl": "https://edita.com.eg/wp-content/uploads/2023/07/freska-choco-sticks-new-logo.png",
         "stock": 100,
         "sizes": [
             {
@@ -1793,7 +1794,7 @@ const QRCode = require('qrcode');
         "description": "Wafer, 1pc",
         "price": 10.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/oiYAcwY2nzBd2Vh6A",
+        "imageUrl": "https://edita.com.eg/wp-content/uploads/2023/07/freska-block-hazelnut-new-logo.png",
         "stock": 100,
         "sizes": [
             {
@@ -1808,7 +1809,7 @@ const QRCode = require('qrcode');
         "description": "Cookies & cream, 4pc",
         "price": 7.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/BMnvPJ8dyanSgfxw5",
+        "imageUrl": "https://images.deliveryhero.io/image/darkstores-eg/EGY_6222001114607.JPG",
         "stock": 90,
         "sizes": [
             {
@@ -1823,7 +1824,7 @@ const QRCode = require('qrcode');
         "description": "Cookies & cream, 4pc",
         "price": 7.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/zkFcaAN3bEH3s1GE7",
+        "imageUrl": "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/6/2/6222001114775.jpg",
         "stock": 90,
         "sizes": [
             {
@@ -1838,7 +1839,7 @@ const QRCode = require('qrcode');
         "description": "Plain biscuit, 8pc",
         "price": 5.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/ECqGjvJ1xJ9BSTLMA",
+        "imageUrl": "https://images.deliveryhero.io/image/product-information-management/62fe20c61b2cd015d16b705a.jpg",
         "stock": 90,
         "sizes": [
             {
@@ -1853,7 +1854,7 @@ const QRCode = require('qrcode');
         "description": "Cocoa biscuit, 8pc",
         "price": 4.5,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/itvm8ggFVHZfNb4S9",
+        "imageUrl": "https://thetasteofegypt.com/cdn/shop/files/63d663c9863381b8de2b3dff_540x@2x.jpg?v=1720328443",
         "stock": 90,
         "sizes": [
             {
@@ -1868,7 +1869,7 @@ const QRCode = require('qrcode');
         "description": "Cookies & cream, 1pc",
         "price": 7.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/76vr9Squ5kV5moUd8",
+        "imageUrl": "https://images.deliveryhero.io/image/product-information-management/6683ba82d9bca3a6477db56c.jpg",
         "stock": 90,
         "sizes": [
             {
@@ -1883,7 +1884,7 @@ const QRCode = require('qrcode');
         "description": "Cookies & cream, 1pc",
         "price": 7.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/3zRrMg8X6K9GhZwt6",
+        "imageUrl": "https://alhabeebmarket.com/storage/product/45104/16313.webp",
         "stock": 90,
         "sizes": [
             {
@@ -1898,7 +1899,7 @@ const QRCode = require('qrcode');
         "description": "Cookies, 6pc",
         "price": 29.21,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/PGDYqDS4bac6HKW46",
+        "imageUrl": "https://m.media-amazon.com/images/I/71mRz+Y3uLL._AC_SX679_.jpg",
         "stock": 40,
         "sizes": [
             {
@@ -1913,7 +1914,7 @@ const QRCode = require('qrcode');
         "description": "Cookies, 2pc",
         "price": 10.12,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/wTfZD2efPcSbCJZp9",
+        "imageUrl": "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/6/2/6224008630647-.jpg",
         "stock": 40,
         "sizes": [
             {
@@ -1928,7 +1929,7 @@ const QRCode = require('qrcode');
         "description": "Cookies, 6pc",
         "price": 39.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/uNY3s3XVHDqDtX9n7",
+        "imageUrl": "https://m.media-amazon.com/images/I/71FF9LbYlUL.jpg",
         "stock": 50,
         "sizes": [
             {
@@ -1943,7 +1944,7 @@ const QRCode = require('qrcode');
         "description": "Chocolate Wafer, 1pc",
         "price": 3.5,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/4pVk2XPmLQFKeKLy8",
+        "imageUrl": "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/6/2/6221030009120_65g.jpg",
         "stock": 50,
         "sizes": [
             {
@@ -1958,7 +1959,7 @@ const QRCode = require('qrcode');
         "description": "Chocolate Wafer, 1pc",
         "price": 26.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/g5hEg9DYJHZ5KiAj8",
+        "imageUrl": "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/6/2/6221030009120_65g.jpg",
         "stock": 50,
         "sizes": [
             {
@@ -1973,7 +1974,7 @@ const QRCode = require('qrcode');
         "description": "King size",
         "price": 10.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/UirmRPKPaZFUe9UD7",
+        "imageUrl": "https://cdn.mafrservices.com/pim-content/EGY/media/product/609589/1724666403/609589_main.jpg?im=Resize=1700",
         "stock": 50,
         "sizes": [
             {
@@ -1988,7 +1989,7 @@ const QRCode = require('qrcode');
         "description": "King size",
         "price": 10.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/zrqC2tMEi2JpV6kh8",
+        "imageUrl": "https://cdn.mafrservices.com/pim-content/EGY/media/product/648671/1739358003/648671_main.jpg?im=Resize=1700",
         "stock": 50,
         "sizes": [
             {
@@ -2003,7 +2004,7 @@ const QRCode = require('qrcode');
         "description": "Larger Size",
         "price": 5.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/Xe9YQQy4NNT1MDhY9",
+        "imageUrl": "https://cdn.mafrservices.com/sys-master-root/hee/h85/64357423808542/634464_main.jpg?im=Resize=480",
         "stock": 50,
         "sizes": [
             {
@@ -2018,7 +2019,7 @@ const QRCode = require('qrcode');
         "description": "Larger Size",
         "price": 5.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/jtDsSHveT6rijQUy7",
+        "imageUrl": "https://m.media-amazon.com/images/I/51ZsE2p9goL._AC_UF894,1000_QL80_DpWeblab_.jpg",
         "stock": 50,
         "sizes": [
             {
@@ -2033,7 +2034,7 @@ const QRCode = require('qrcode');
         "description": "yummy Chocolate cake",
         "price": 7.45,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/7yyd9L84tTxUpsD5A",
+        "imageUrl": "https://images.deliveryhero.io/image/product-information-management/676e6087f8fd5beef0b13b3d.png",
         "stock": 90,
         "sizes": [
             {
@@ -2048,7 +2049,7 @@ const QRCode = require('qrcode');
         "description": "1pc",
         "price": 10.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/i1WwFNrYZ7UjE3vt7",
+        "imageUrl": "https://m.media-amazon.com/images/I/61bF-T3PZgL._AC_UF894,1000_QL80_.jpg",
         "stock": 90,
         "sizes": [
             {
@@ -2063,7 +2064,7 @@ const QRCode = require('qrcode');
         "description": "1pc",
         "price": 10.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/T5HNztGv6aKjE1Hg7",
+        "imageUrl": "https://m.media-amazon.com/images/I/31Ae7s6np8L._AC_UF894,1000_QL80_.jpg",
         "stock": 90,
         "sizes": [
             {
@@ -2078,7 +2079,7 @@ const QRCode = require('qrcode');
         "description": "1pc",
         "price": 10.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/WWq78P9CpUpUT43v5",
+        "imageUrl": "https://m.media-amazon.com/images/I/7192WPsYiyL._AC_UF894,1000_QL80_.jpg",
         "stock": 90,
         "sizes": [
             {
@@ -2093,7 +2094,7 @@ const QRCode = require('qrcode');
         "description": "Stored at 20-25c",
         "price": 10.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/mfk147Xxdg6yP6Je9",
+        "imageUrl": "https://m.media-amazon.com/images/I/61-RqC-RmiL.jpg",
         "stock": 90,
         "sizes": [
             {
@@ -2108,7 +2109,7 @@ const QRCode = require('qrcode');
         "description": "1 pc",
         "price": 10.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/xTxSBEEoPGM4uzra6",
+        "imageUrl": "https://m.media-amazon.com/images/I/71XSrGIGN7L._AC_UF894,1000_QL80_.jpg",
         "stock": 90,
         "sizes": [
             {
@@ -2123,7 +2124,7 @@ const QRCode = require('qrcode');
         "description": "1 pc",
         "price": 10.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/X5G1KdLrvMh3zGGRA",
+        "imageUrl": "https://images.deliveryhero.io/image/product-information-management/676e60a7f8fd5beef0b13c94.png",
         "stock": 90,
         "sizes": [
             {
@@ -2138,7 +2139,7 @@ const QRCode = require('qrcode');
         "description": "yummy cake",
         "price": 10.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/wb2CqVDtiXB53Efq5",
+        "imageUrl": "https://images.deliveryhero.io/image/product-information-management/676e6009f8fd5beef0b1399a.png?size=520",
         "stock": 90,
         "sizes": [
             {
@@ -2153,7 +2154,7 @@ const QRCode = require('qrcode');
         "description": "king size cake",
         "price": 10.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/TeR14wWerfppg5ZcA",
+        "imageUrl": "https://edita.com.eg/wp-content/uploads/2024/07/Hohos-KING.png",
         "stock": 90,
         "sizes": [
             {
@@ -2168,7 +2169,7 @@ const QRCode = require('qrcode');
         "description": "1pc",
         "price": 10.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/6616hsBTh5DiZRUX7",
+        "imageUrl": "https://cdn.mafrservices.com/pim-content/EGY/media/product/652059/1743931803/652059_main.jpg",
         "stock": 90,
         "sizes": [
             {
@@ -2183,7 +2184,7 @@ const QRCode = require('qrcode');
         "description": "Smoked cheese",
         "price": 10.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/vUpmke4Mte5ww43t6",
+        "imageUrl": "https://m.media-amazon.com/images/I/71+9H787G7L._AC_UF894,1000_QL80_.jpg",
         "stock": 60,
         "sizes": [
             {
@@ -2198,7 +2199,7 @@ const QRCode = require('qrcode');
         "description": "Smoked cheese",
         "price": 15.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/vUpmke4Mte5ww43t6",
+        "imageUrl": "https://m.media-amazon.com/images/I/71+9H787G7L._AC_UF894,1000_QL80_.jpg",
         "stock": 60,
         "sizes": [
             {
@@ -2213,7 +2214,7 @@ const QRCode = require('qrcode');
         "description": "Chips",
         "price": 15.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/jevTfp5nFGD8LzAm8",
+        "imageUrl": "https://m.media-amazon.com/images/I/81rb+JhZfhL._AC_UF894,1000_QL80_.jpg",
         "stock": 60,
         "sizes": [
             {
@@ -2228,7 +2229,7 @@ const QRCode = require('qrcode');
         "description": "Chips",
         "price": 15.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/NR7innXa1igZjbvDA",
+        "imageUrl": "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/6/2/6222035205715_80-90g.jpg",
         "stock": 60,
         "sizes": [
             {
@@ -2243,7 +2244,7 @@ const QRCode = require('qrcode');
         "description": "Chips",
         "price": 15.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/tV7cj12rdjjJXE5D6",
+        "imageUrl": "https://gourmetegypt.com/media/catalog/product/6/2/6222035228240.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=&width=",
         "stock": 60,
         "sizes": [
             {
@@ -2258,7 +2259,7 @@ const QRCode = require('qrcode');
         "description": "Healthy Snack",
         "price": 5.25,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/UesazGarCAAa4nXt9",
+        "imageUrl": "https://images.deliveryhero.io/image/darkstores-eg/EGY_6224000045654.jpg?size=520",
         "stock": 60,
         "sizes": [
             {
@@ -2273,7 +2274,7 @@ const QRCode = require('qrcode');
         "description": "Healthy Snack",
         "price": 5.25,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/ZJfbXX3heyw75andA",
+        "imageUrl": "https://images.deliveryhero.io/image/nv-eg/Quick%2024/5%20July/6224000045074.png",
         "stock": 60,
         "sizes": [
             {
@@ -2288,7 +2289,7 @@ const QRCode = require('qrcode');
         "description": "Healthy Snack",
         "price": 5.25,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/oT36YgHCK5wH3LHh8",
+        "imageUrl": "https://static.wixstatic.com/media/18965a_3a8493e121d747cdb269527db114de9f~mv2.jpg/v1/fill/w_625,h_938,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/18965a_3a8493e121d747cdb269527db114de9f~mv2.jpg",
         "stock": 60,
         "sizes": [
             {
@@ -2303,7 +2304,7 @@ const QRCode = require('qrcode');
         "description": "Crunchy and delicious",
         "price": 13.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/ggp4rpoPj4BSKyFQ7",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM4x2-ttlgtEzaMcWzqL-Q_PZwgtnscOzvaB0kDH8Tdp-vlOf5UbBuRGxV4Wmdpx1XxYc&usqp=CAU",
         "stock": 60,
         "sizes": [
             {
@@ -2318,7 +2319,7 @@ const QRCode = require('qrcode');
         "description": "Crunchy and delicious",
         "price": 13.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/LvKpjoaAdQRU3KVJ9",
+        "imageUrl": "https://images.deliveryhero.io/image/product-information-management/64edbc498d63f86d7f14e72f.jpg",
         "stock": 60,
         "sizes": [
             {
@@ -2333,7 +2334,7 @@ const QRCode = require('qrcode');
         "description": "Crunchy and delicious",
         "price": 13.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/DCg3aboVDzqGq6Jy9",
+        "imageUrl": "https://images.deliveryhero.io/image/darkstores-eg/EGY_6223009441177.JPG?size=520",
         "stock": 60,
         "sizes": [
             {
@@ -2348,7 +2349,7 @@ const QRCode = require('qrcode');
         "description": "Crunchy and delicious",
         "price": 13.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/76rzHdzcgEiqKji7A",
+        "imageUrl": "https://m.media-amazon.com/images/I/71Ff24YNjsL._AC_UF894,1000_QL80_.jpg",
         "stock": 60,
         "sizes": [
             {
@@ -2363,7 +2364,7 @@ const QRCode = require('qrcode');
         "description": "Crunchy and delicious",
         "price": 13.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/pY9hq3Ko7EQHu7n9A",
+        "imageUrl": "https://m.media-amazon.com/images/I/61LnYJUSLLL.jpg",
         "stock": 60,
         "sizes": [
             {
@@ -2378,7 +2379,7 @@ const QRCode = require('qrcode');
         "description": "Healthy and delicious Snack",
         "price": 15.45,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/UYmjoNnR2UdtYKNa9",
+        "imageUrl": "https://m.media-amazon.com/images/I/41k06qmuF9L.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_QL100_.jpg",
         "stock": 60,
         "sizes": [
             {
@@ -2393,7 +2394,7 @@ const QRCode = require('qrcode');
         "description": "Healthy and delicious Snack",
         "price": 15.45,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/F4gAESRrgf8hDacw7",
+        "imageUrl": "https://m.media-amazon.com/images/I/61d5Gn+jR7L.jpg",
         "stock": 60,
         "sizes": [
             {
@@ -2408,7 +2409,7 @@ const QRCode = require('qrcode');
         "description": "Snack",
         "price": 10.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/dZFYp9zCLbNbTFY79",
+        "imageUrl": "https://www.qebox.app/qebox/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-25-at-3.22.32-PM.jpeg",
         "stock": 90,
         "sizes": [
             {
@@ -2423,7 +2424,7 @@ const QRCode = require('qrcode');
         "description": "Snack",
         "price": 10.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/fmDu3yJ9wRy398iS8",
+        "imageUrl": "https://f.nooncdn.com/products/pzsku/Z97E3840249F624FF3B97Z/45/_/1736940846/a6ed59a5-2d13-45a3-b858-9afe6f368e4c.jpg",
         "stock": 90,
         "sizes": [
             {
@@ -2438,7 +2439,7 @@ const QRCode = require('qrcode');
         "description": "Snack",
         "price": 10.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/5XzsTbJ8XUV6iPTAA",
+        "imageUrl": "https://m.media-amazon.com/images/I/71QMbAgPsnL.jpg",
         "stock": 90,
         "sizes": [
             {
@@ -2453,7 +2454,7 @@ const QRCode = require('qrcode');
         "description": "Healthy Snack",
         "price": 5.25,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/TNUmMKu2fcHZKRg26",
+        "imageUrl": "https://static.wixstatic.com/media/18965a_9a6f3e0f25a2440ab1274688da005f3c~mv2.jpeg/v1/fill/w_480,h_556,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/18965a_9a6f3e0f25a2440ab1274688da005f3c~mv2.jpeg",
         "stock": 60,
         "sizes": [
             {
@@ -2468,7 +2469,7 @@ const QRCode = require('qrcode');
         "description": "Healthy Snack",
         "price": 5.25,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/RTKbZmQbnnzhrVhKA",
+        "imageUrl": "https://static.wixstatic.com/media/18965a_9072cd611def48a3a885ac4c25b1a243~mv2.jpeg/v1/fit/w_500,h_500,q_90/file.jpg",
         "stock": 60,
         "sizes": [
             {
@@ -2483,7 +2484,7 @@ const QRCode = require('qrcode');
         "description": "Healthy Snack",
         "price": 5.25,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/piLVpdVzch1cG6uZ7",
+        "imageUrl": "https://images.deliveryhero.io/image/darkstores-eg/EGY_6224000045678.jpg?size=520",
         "stock": 60,
         "sizes": [
             {
@@ -2498,7 +2499,7 @@ const QRCode = require('qrcode');
         "description": "Crunchy Snack",
         "price": 15.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/9LAdEwKsKvPqNEro6",
+        "imageUrl": "https://cdn.mafrservices.com/pim-content/EGY/media/product/646467/1735208476/646467_main.jpg",
         "stock": 60,
         "sizes": [
             {
@@ -2513,7 +2514,7 @@ const QRCode = require('qrcode');
         "description": "Crunchy Snack",
         "price": 10.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/xcG7bfdq1yj5JDqe6",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5dw5oinxSoe_H57QnixalMmqxOMi1Rv2gejSN7l5Ukp3Rpm8w30TKn_hEgJpJeJD6tLw&usqp=CAU",
         "stock": 60,
         "sizes": [
             {
@@ -2528,7 +2529,7 @@ const QRCode = require('qrcode');
         "description": "Crunchy Snack",
         "price": 20.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/aQxRxJCzEWo81ijx9",
+        "imageUrl": "https://images.deliveryhero.io/image/product-information-management/672dc67f75e26928dcf59402.png?size=520",
         "stock": 80,
         "sizes": [
             {
@@ -2543,7 +2544,7 @@ const QRCode = require('qrcode');
         "description": "Crunchy Snack",
         "price": 20.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/UzZu2eSfyiNqVAkT9",
+        "imageUrl": "https://m.media-amazon.com/images/I/81oRM2mN+EL._AC_UF894,1000_QL80_.jpg",
         "stock": 80,
         "sizes": [
             {
@@ -2558,7 +2559,7 @@ const QRCode = require('qrcode');
         "description": "Crunchy Snack",
         "price": 20.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/tYGGNeGfk26h4wvU6",
+        "imageUrl": "https://m.media-amazon.com/images/I/81BG37l8DhL.jpg",
         "stock": 80,
         "sizes": [
             {
@@ -2573,7 +2574,7 @@ const QRCode = require('qrcode');
         "description": "Crunchy Snack",
         "price": 20.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/Mij7gTDnxvcRvDXh8",
+        "imageUrl": "https://m.media-amazon.com/images/I/81BG37l8DhL.jpg",
         "stock": 80,
         "sizes": [
             {
@@ -2588,7 +2589,7 @@ const QRCode = require('qrcode');
         "description": "Healthy Snack",
         "price": 20.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/7gTMTq3zHmz5RVVo8",
+        "imageUrl": "https://images.deliveryhero.io/image/product-information-management/66b9d38020dbde1610cc113a.JPG",
         "stock": 80,
         "sizes": [
             {
@@ -2603,7 +2604,7 @@ const QRCode = require('qrcode');
         "description": "Healthy Snack",
         "price": 20.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/hQ8BRKjvA5wo8oQW6",
+        "imageUrl": "https://cdn.mafrservices.com/pim-content/EGY/media/product/637773/1724056803/637773_main.jpg?im=Resize=400",
         "stock": 80,
         "sizes": [
             {
@@ -2618,7 +2619,7 @@ const QRCode = require('qrcode');
         "description": "Premium Snack Product",
         "price": 12.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/1XxhwaYxBgxK4RT29",
+        "imageUrl": "https://cdn.mafrservices.com/pim-content/EGY/media/product/646761/1735824603/646761_main.jpg",
         "stock": 80,
         "sizes": [
             {
@@ -2633,7 +2634,7 @@ const QRCode = require('qrcode');
         "description": "Premium Snack Product",
         "price": 12.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/XpvPgtPfopin4TaS6",
+        "imageUrl": "https://cdn.mafrservices.com/pim-content/EGY/media/product/646760/1735824603/646760_main.jpg",
         "stock": 80,
         "sizes": [
             {
@@ -2648,7 +2649,7 @@ const QRCode = require('qrcode');
         "description": "Premium Snack Product",
         "price": 12.0,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/SnndEyKU1WVMoe9d8",
+        "imageUrl": "https://cdn.mafrservices.com/pim-content/EGY/media/product/646759/1735824603/646759_main.jpg?im=Resize=400",
         "stock": 80,
         "sizes": [
             {
@@ -2663,7 +2664,7 @@ const QRCode = require('qrcode');
         "description": "Healthy Snack",
         "price": 5.25,
         "category": "Snacks",
-        "imageUrl": "https://images.app.goo.gl/sedTQcLY9oVvMf7CA",
+        "imageUrl": "https://static.wixstatic.com/media/4d4dab_e18effad4e824aecbcbb2e6302e2d39a~mv2.png/v1/fit/w_500,h_500,q_90/file.png",
         "stock": 60,
         "sizes": [
             {
@@ -2678,7 +2679,7 @@ const QRCode = require('qrcode');
         "description": "Fresh",
         "price": 54.95,
         "category": "Fruits",
-        "imageUrl": "https://images.app.goo.gl/XUggAazcTbHhW1M77",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4TZrxXlX3LydHMyku-OsPjspD7mC1tO3fS7Z38RhyhaRPii_s7HfJFZkyV43b3Sj6vts&usqp=CAU",
         "stock": 60,
         "sizes": [
             {
@@ -2693,7 +2694,7 @@ const QRCode = require('qrcode');
         "description": "Fresh",
         "price": 129.95,
         "category": "Fruits",
-        "imageUrl": "https://images.app.goo.gl/zno7ejpiEEKSJcYH8",
+        "imageUrl": "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/2/3/2394534000000.jpg",
         "stock": 60,
         "sizes": [
             {
@@ -2708,7 +2709,7 @@ const QRCode = require('qrcode');
         "description": "Fresh",
         "price": 24.95,
         "category": "Vegetables",
-        "imageUrl": "https://images.app.goo.gl/vonxeoGNMjush59K7",
+        "imageUrl": "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/2/3/2394050000003kg.jpg",
         "stock": 60,
         "sizes": [
             {
@@ -2723,7 +2724,7 @@ const QRCode = require('qrcode');
         "description": "Fresh",
         "price": 21.95,
         "category": "Vegetables",
-        "imageUrl": "https://images.app.goo.gl/uXjeTkPRs89Gi22a6",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo4Ys8OICBcNRGgcP3Ftz_hUUmoIoZYd2IWhzy3QQDSoz1m7a7pvbMdInW7HbzYz6hjRU&usqp=CAU",
         "stock": 60,
         "sizes": [
             {
@@ -2738,7 +2739,7 @@ const QRCode = require('qrcode');
         "description": "Fresh",
         "price": 16.95,
         "category": "Vegetables",
-        "imageUrl": "https://images.app.goo.gl/Fwkp9SZiD7q6xGh18",
+        "imageUrl": "https://www.freshaisle.com/cdn/shop/products/fresh-cherry-tomato-red-200-gm-exotic-vegetables-617.jpg?v=1739195244",
         "stock": 60,
         "sizes": [
             {
@@ -2753,7 +2754,7 @@ const QRCode = require('qrcode');
         "description": "Fresh",
         "price": 14.95,
         "category": "Vegetables",
-        "imageUrl": "https://images.app.goo.gl/vXS3NYGDuU3SCzhe7",
+        "imageUrl": "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/9/2/9220018000002.jpg",
         "stock": 60,
         "sizes": [
             {
@@ -2768,7 +2769,7 @@ const QRCode = require('qrcode');
         "description": "Fresh",
         "price": 18.95,
         "category": "Vegetables",
-        "imageUrl": "https://images.app.goo.gl/4ja4QYVtKazTMNwR9",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ37lOW4xvwfkofT6kCESGmXV1UTtawLwVMvWx0aS7oJ9mVSPJraYmG9HH3JHl0Ow4s7Iw&usqp=CAU",
         "stock": 60,
         "sizes": [
             {
@@ -2783,7 +2784,7 @@ const QRCode = require('qrcode');
         "description": "Fresh",
         "price": 39.95,
         "category": "Vegetables",
-        "imageUrl": "https://images.app.goo.gl/8wc7MteMZn5ye4w89",
+        "imageUrl": "https://taylorproduce.co.uk/wp-content/uploads/2021/03/Mixed-Peppers.jpg",
         "stock": 60,
         "sizes": [
             {
@@ -2798,7 +2799,7 @@ const QRCode = require('qrcode');
         "description": "Fresh",
         "price": 24.95,
         "category": "Vegetables",
-        "imageUrl": "https://images.app.goo.gl/oh2bRbjYETWiY8hR6",
+        "imageUrl": "https://produits.bienmanger.com/38827-0w600h600_Organic_Fresh_Green_Peppers.jpg",
         "stock": 60,
         "sizes": [
             {
@@ -2813,7 +2814,7 @@ const QRCode = require('qrcode');
         "description": "Fresh",
         "price": 21.95,
         "category": "Vegetables",
-        "imageUrl": "https://images.app.goo.gl/rHFxVMXPFS8FHKDi7",
+        "imageUrl": "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/w/h/white_onions.jpg",
         "stock": 60,
         "sizes": [
             {
@@ -2828,7 +2829,7 @@ const QRCode = require('qrcode');
         "description": "Fresh",
         "price": 116.95,
         "category": "Vegetables",
-        "imageUrl": "https://images.app.goo.gl/wxFcJ75mGgskKBKP6",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScT9DsXrGXtaRljvFKjx1lqxN20eh9B_IS98mmT2oLOyuPxBKrtyQc2b79pFc5-BX7A9s&usqp=CAU",
         "stock": 60,
         "sizes": [
             {
@@ -2843,7 +2844,7 @@ const QRCode = require('qrcode');
         "description": "Fresh",
         "price": 39.95,
         "category": "Vegetables",
-        "imageUrl": "https://images.app.goo.gl/EBc5dFm3oZdgrCe58",
+        "imageUrl": "https://buymassry.com/images/detailed/22/fresh-garlic-removebg-preview.jpg",
         "stock": 60,
         "sizes": [
             {
@@ -2858,7 +2859,7 @@ const QRCode = require('qrcode');
         "description": "Fresh",
         "price": 21.95,
         "category": "Vegetables",
-        "imageUrl": "https://images.app.goo.gl/j5UUk7myZvhQP6vW6",
+        "imageUrl": "https://buymassry.com/images/thumbnails/350/350/detailed/20/hot-chili.jpg",
         "stock": 60,
         "sizes": [
             {
@@ -2873,7 +2874,7 @@ const QRCode = require('qrcode');
         "description": "Fresh",
         "price": 99.95,
         "category": "Vegetables",
-        "imageUrl": "https://images.app.goo.gl/9M5Ye7SyvgpC4mF89",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS1vz5w-CJ0mlRvqfqpuKJ6hounzs6VRfIlqkbec8ZOlU4OPaIp9NVjjy9sSwXb0ZwT2I&usqp=CAU",
         "stock": 60,
         "sizes": [
             {
@@ -2888,7 +2889,7 @@ const QRCode = require('qrcode');
         "description": "Fresh",
         "price": 35.95,
         "category": "Vegetables",
-        "imageUrl": "https://images.app.goo.gl/M7TLDajdnetWVvNc7",
+        "imageUrl": "https://images.heb.com/is/image/HEBGrocery/prd-medium/000448930.jpg",
         "stock": 60,
         "sizes": [
             {
@@ -2903,7 +2904,7 @@ const QRCode = require('qrcode');
         "description": "Fresh",
         "price": 49.95,
         "category": "Vegetables",
-        "imageUrl": "https://images.app.goo.gl/5GBmEhGRjptc5E2t7",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS50MNbkgicdrJ9mXrJ5e8pOoJF25Yyt7V2KYL90XsYGWxUxGMNbpkXBBy79QDJ6sRLFg&usqp=CAU",
         "stock": 60,
         "sizes": [
             {
@@ -2918,7 +2919,7 @@ const QRCode = require('qrcode');
         "description": "Fresh",
         "price": 214.95,
         "category": "Fruits",
-        "imageUrl": "https://images.app.goo.gl/1dosSy7sPteaiv8T6",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ26ylfmAHoMe-qnHpItbVbzsHSOsQlhvAxK7h-t0l0yrVMl3vn6bPH2wFRIQoNN6bkGUw&usqp=CAU",
         "stock": 60,
         "sizes": [
             {
@@ -2933,7 +2934,7 @@ const QRCode = require('qrcode');
         "description": "Fresh",
         "price": 89.95,
         "category": "Fruits",
-        "imageUrl": "https://images.app.goo.gl/RqvnffZzqphfNatD9",
+        "imageUrl": "https://glycemic-index.net/images/rpaE64Cepa.webp",
         "stock": 60,
         "sizes": [
             {
@@ -2948,7 +2949,7 @@ const QRCode = require('qrcode');
         "description": "Halal",
         "price": 316.95,
         "category": "Meats and Fish",
-        "imageUrl": "https://images.app.goo.gl/1daWrcKREkvrDXeb9",
+        "imageUrl": "https://images.deliveryhero.io/image/darkstores-eg/EGY_6224000705787.JPG?size=520",
         "stock": 40,
         "sizes": [
             {
@@ -2963,7 +2964,7 @@ const QRCode = require('qrcode');
         "description": "Halal",
         "price": 109.95,
         "category": "Meats and Fish",
-        "imageUrl": "https://images.app.goo.gl/wMd8hEcTrFFWzRGj6",
+        "imageUrl": "https://erposcar.msol.dev/focus/products/6224000705909.webp",
         "stock": 40,
         "sizes": [
             {
@@ -2978,7 +2979,7 @@ const QRCode = require('qrcode');
         "description": "Halal",
         "price": 219.95,
         "category": "Meats and Fish",
-        "imageUrl": "https://images.app.goo.gl/wMd8hEcTrFFWzRGj6",
+        "imageUrl": "https://erposcar.msol.dev/focus/products/6224000705909.webp",
         "stock": 40,
         "sizes": [
             {
@@ -2993,7 +2994,7 @@ const QRCode = require('qrcode');
         "description": "Halal",
         "price": 208.95,
         "category": "Meats and Fish",
-        "imageUrl": "https://images.app.goo.gl/XWbeQQhykb9XQD838",
+        "imageUrl": "https://erposcar.msol.dev/focus/products/6224000705800.webp",
         "stock": 40,
         "sizes": [
             {
