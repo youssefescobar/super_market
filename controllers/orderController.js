@@ -4,11 +4,13 @@ const Order = require("../models/orderSchema");
 exports.getPaidOrders = async (req, res ) => {
     try {
 
-       const orders = await Order.find({ isPaid: true })
-  .sort({ createdAt: -1 })           // newest first
-  .limit(20)                         // only get recent 20 orders
+     const orders = await Order.find({ isPaid: true })
+  .select('userId items createdAt totalAmount') // example
+  .sort({ createdAt: -1 })
+  .limit(20)
   .populate('userId', 'name email')
   .populate('items.productId', 'name price');
+
 
         res.status(201).json({orders});
        
