@@ -24,6 +24,9 @@ const mongoose =require('mongoose');
 
  },{timestamps:true});
 
+ orderSchema.index({ isPaid: 1 });
+
+
  const Order = mongoose.model('Order',orderSchema);
 
  module.exports = Order;

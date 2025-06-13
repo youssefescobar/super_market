@@ -4,12 +4,17 @@ const Order = require("../models/orderSchema");
 exports.getPaidOrders = async (req, res ) => {
     try {
 
-     const orders = await Order.find({ isPaid: true })
-  .select('userId items createdAt totalAmount') // example
+    const page = req.query.page || 1;
+const limit = 20;
+const skip = (page - 1) * limit;
+
+const orders = await Order.find({ isPaid: true })
   .sort({ createdAt: -1 })
-  .limit(20)
+  .skip(skip)
+  .limit(limit)
   .populate('userId', 'name email')
   .populate('items.productId', 'name price');
+
 
 
         res.status(201).json({orders});
