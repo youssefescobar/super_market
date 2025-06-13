@@ -9,33 +9,24 @@ const Cart = require('../models/CartSchema');
 // 1- Create Stripe PaymentIntent and Payment record
 exports.createStripePayment = async (req, res) => {
   try {
-    const { userId, cartId } = req.body;
+    const userId = req.user.id;
+    const cart = await Cart.findOne({ userId: userId }).populate('items.productId');
 
-    if (!userId || !cartId) {
-      return res.status(400).json({ message: 'Missing userId or cartId' });
-    }
-
-    // 1. Fetch cart details from DB
-const cart = await Cart.findById(cartId).populate('items.productId'); 
-    
     if (!cart || cart.items.length === 0) {
       return res.status(404).json({ message: 'Cart not found or empty' });
     }
 
-    // 2. Calculate total amount
     let totalAmount = 0;
     for (const item of cart.items) {
       totalAmount += item.productId.price * item.quantity;
     }
 
-    // 3. Create Stripe PaymentIntent
     const paymentIntent = await stripe.paymentIntents.create({
-      amount: totalAmount * 100, // Stripe uses cents
-      currency: 'usd',
+      amount: Math.round(totalAmount * 100),
+      currency: 'egp',
       payment_method_types: ['card'],
-    });
+});
 
-    // 4. Create Payment record with cartId reference
     const payment = await Payment.create({
       user: userId,
       cart: cart._id,
@@ -54,6 +45,7 @@ const cart = await Cart.findById(cartId).populate('items.productId');
     res.status(500).json({ message: 'Payment failed', error: error.message });
   }
 };
+
 
 
 // 2- Confirm Payment after success
@@ -89,6 +81,9 @@ exports.confirmPayment = async (req, res) => {
 
     // Save payment
     await payment.save();
+
+    // 6. Clear the user's cart
+    await Cart.findOneAndDelete({ userId: payment.user });
 
     res.status(200).json({
       message: 'Payment confirmed and QR receipt ready',
