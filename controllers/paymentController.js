@@ -5,6 +5,7 @@ const Payment = require('../models/paymentSchema');
 const QRCode = require('qrcode');
 const Product = require('../models/productSchema');
 const Cart = require('../models/CartSchema');
+const Order = require('../models/orderSchema');
 
 // 1- Create Stripe PaymentIntent and Payment record
 exports.createStripePayment = async (req, res) => {
@@ -89,6 +90,23 @@ exports.confirmPayment = async (req, res) => {
 
     // Save payment
     await payment.save();
+
+
+
+    const order= new Order ({
+      userId: payment.user,
+      items: payment.products.map((item)=>({
+        productId: item.product._id,
+        quantity: item.quantity
+      })),
+      totalAmount:payment.totalAmount,
+      isPaid: true,
+      paidAt: new Date(),
+      status: 'done'
+
+    });
+
+    await order.save();
 
     res.status(200).json({
       message: 'Payment confirmed and QR receipt ready',
