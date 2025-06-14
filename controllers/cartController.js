@@ -65,15 +65,32 @@ exports.getMyCart = async (req, res) => {
     if (!cart) {
       cart = await Cart.create({ userId, items: [] });
     }
-    
 
-    res.status(200).json(cart);
+    // Calculate totals
+    let grandTotal = 0;
+    let totalProducts = 0;
+
+    cart.items.forEach((item) => {
+      if (item.productId) {
+        const price = item.productId.price || 0;
+        const quantity = item.quantity || 0;
+        grandTotal += price * quantity;
+        totalProducts += quantity;
+      }
+    });
+
+    res.status(200).json({
+      cart,
+      grandTotal: parseFloat(grandTotal.toFixed(2)), // rounding to 2 decimal places
+      totalProducts,
+    });
 
   } catch (error) {
     console.error("Get My Cart Error:", error);
     res.status(500).json({ message: "Server error" });
   }
 };
+
 
 exports.clearCart = async (req, res) => {
   try {
