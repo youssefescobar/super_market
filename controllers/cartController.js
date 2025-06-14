@@ -124,7 +124,7 @@ exports.removeCart = async (req, res, next) => {
 exports.decreaseProductQuantity = async (req, res, next) => {
   try {
     const userId = req.user.id;
-    const productId = req.body;
+    const {productId} = req.body;
     //   const userObjectId = new mongoose.Types.ObjectId(userId);
 
     let cart = await Cart.findOne({ userId });
