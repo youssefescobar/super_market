@@ -56,23 +56,41 @@ exports.getMyCart = async (req, res) => {
   try {
     const userId = req.user.id;
 
-    const cart = await Cart.findOne({ userId }).populate(
+    let cart = await Cart.findOne({ userId }).populate(
       "items.productId",
       "name image price description"
     );
-    if (!cart) return res.status(404).json({ message: "Cart not found" });
 
-    const totalQuantity = cart.items.reduce((acc, i) => acc + i.quantity, 0);
-    const totalPrice = cart.items.reduce(
-      (acc, i) => acc + i.productId.price * i.quantity,
-      0 
-    );
+    // If no cart exists, create an empty one
+    if (!cart) {
+      cart = await Cart.create({ userId, items: [] });
+    }
 
-    res.status(200).json({ cart, totalQuantity, totalPrice });
-  } catch (err) {
-    res.status(500).json({ message: err.message });
+    // Calculate totals
+    let grandTotal = 0;
+    let totalProducts = 0;
+
+    cart.items.forEach((item) => {
+      if (item.productId) {
+        const price = item.productId.price || 0;
+        const quantity = item.quantity || 0;
+        grandTotal += price * quantity;
+        totalProducts += quantity;
+      }
+    });
+
+    res.status(200).json({
+      cart,
+      grandTotal: parseFloat(grandTotal.toFixed(2)), // rounding to 2 decimal places
+      totalProducts,
+    });
+
+  } catch (error) {
+    console.error("Get My Cart Error:", error);
+    res.status(500).json({ message: "Server error" });
   }
 };
+
 
 exports.clearCart = async (req, res) => {
   try {
