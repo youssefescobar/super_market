@@ -164,7 +164,7 @@ exports.decreaseProductQuantity = async (req, res, next) => {
 exports.removeProductFromCart = async (req, res, next) => {
   try {
     const userId = req.user.id;
-    const productId = req.body;
+    const {productId} = req.body;
 
     const cart = await Cart.findOne({ userId });
     if (!cart) return res.status(404).json({ message: "Cart not found" });
