@@ -55,7 +55,7 @@ exports.addProductToCart = async (req, res, next) => {
 exports.getMyCart = async (req, res) => {
   try {
     const userId = req.user.id;
-
+ 
     let cart = await Cart.findOne({ userId }).populate(
       "items.productId",
       "name image price description"
