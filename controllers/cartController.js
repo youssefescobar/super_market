@@ -58,7 +58,7 @@ exports.getMyCart = async (req, res) => {
 
     let cart = await Cart.findOne({ userId }).populate(
       "items.productId",
-      "name image price description"
+      "name imageUrl price description"
     );
 
     // If no cart exists, create an empty one
