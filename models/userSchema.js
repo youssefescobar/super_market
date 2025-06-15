@@ -19,6 +19,9 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    stripeCustomerId: {
+      type: String,
+    },
     role: {
       type: String,
       enum: ["user", "admin"],
