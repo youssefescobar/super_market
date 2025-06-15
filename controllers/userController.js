@@ -133,3 +133,54 @@ exports.getMyProfile = async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 };
+
+exports.updateMyProfile = async (req, res) => {
+    try {
+        const userId = req.user.id;
+        const { name, email, phone } = req.body;
+
+        const user = await User.findById(userId);
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+
+        if (email && email !== user.email) {
+            const existingUser = await User.findOne({ email: email });
+            if (existingUser && existingUser._id.toString() !== userId) {
+                return res.status(409).json({ message: 'Email is already in use by another account.' });
+            }
+            user.email = email;
+        }
+
+        if (phone && phone !== user.phone) {
+
+            const existingUser = await User.findOne({ phone: phone });
+            
+            if (existingUser && existingUser.phone && existingUser._id.toString() !== userId) {
+                return res.status(409).json({ message: 'Phone number is already in use by another account.' });
+            }
+            user.phone = phone;
+        }
+
+        if (name) {
+            user.name = name;
+        }
+
+        const updatedUser = await user.save();
+
+        res.status(200).json({
+            _id: updatedUser._id,
+            name: updatedUser.name,
+            email: updatedUser.email,
+            phone: updatedUser.phone,
+        });
+
+    } catch (error) {
+        console.error(`Error updating user profile: ${error.message}`);
+        if (error.code === 11000) {
+             return res.status(409).json({ message: 'A profile with the provided email or phone already exists.' });
+        }
+        res.status(500).json({ message: 'Server error while updating profile.' });
+    }
+};

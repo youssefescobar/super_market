@@ -9,9 +9,11 @@ router.post('/create', validateUser, auth, authorize('admin'), userController.cr
  
 router.get('/all',auth,userController.getAllUsers); // get all users for admin
 router.get('/MyProfile', auth, userController.getMyProfile); // profile
-
+router.put('/UpdateProfile', auth, userController.updateMyProfile);
 router.get('/:id', auth, authorize('admin'), userController.getUser);
 router.put('/:id', auth, authorize('admin'), userController.updateUser);
+
+
 router.delete('/:id', auth, authorize('admin'), userController.deleteUser);
 router.patch('/:id/role', auth, authorize('admin'), userController.changeUserRole);
 
