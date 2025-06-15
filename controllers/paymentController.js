@@ -54,7 +54,7 @@ exports.createStripePayment = async (req, res) => {
 
       paymentIntent = await stripe.paymentIntents.create({
         amount: Math.round(totalAmount * 100),
-        currency: 'egp',
+        currency: 'usd',
         customer: user.stripeCustomerId,
         payment_method: defaultPaymentMethod, // Use the saved card
         off_session: true, // Indicates the customer is not actively in the session
