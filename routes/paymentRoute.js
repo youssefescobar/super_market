@@ -12,3 +12,4 @@ router.post("/confirm-payment", paymentController.confirmPayment);
 router.get("/receipt/:paymentId", paymentController.getReceipt);
 
 module.exports = router;
+ 
