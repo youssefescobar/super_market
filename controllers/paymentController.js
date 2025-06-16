@@ -66,7 +66,7 @@ exports.createStripePayment = async (req, res) => {
       console.log('User has no saved card. Preparing to save a new one.');
       paymentIntent = await stripe.paymentIntents.create({
         amount: Math.round(totalAmount * 100),
-        currency: 'egp',
+        currency: 'usd',
         customer: user.stripeCustomerId,
         // This flag tells Stripe: "When the user enters a card on the frontend
         // to pay for this, save it for future use."
