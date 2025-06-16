@@ -76,43 +76,6 @@ exports.createStripePayment = async (req, res) => {
   }
 };
 
-// New: Endpoint to check for and retrieve saved cards
-exports.getSavedCards = async (req, res) => {
-    try {
-        const userId = req.user.id;
-        const user = await User.findById(userId);
-
-        if (!user || !user.stripeCustomerId) {
-            // If the user has no Stripe ID, they have no saved cards.
-            return res.status(200).json({ hasSavedCards: false, cards: [] });
-        }
-        
-        // List all payment methods (cards) for the Stripe customer
-        const paymentMethods = await stripe.paymentMethods.list({
-            customer: user.stripeCustomerId,
-            type: 'card',
-        });
-        
-        if (paymentMethods.data.length > 0) {
-            res.status(200).json({
-                hasSavedCards: true,
-                cards: paymentMethods.data.map(pm => ({
-                    id: pm.id,
-                    brand: pm.card.brand,
-                    last4: pm.card.last4,
-                    exp_month: pm.card.exp_month,
-                    exp_year: pm.card.exp_year,
-                })),
-            });
-        } else {
-            res.status(200).json({ hasSavedCards: false, cards: [] });
-        }
-
-    } catch (error) {
-        console.error('Get Saved Cards Error:', error);
-        res.status(500).json({ message: 'Server error', error: error.message });
-    }
-};
 
 // 2- Confirm Payment after success (No changes needed here)
 exports.confirmPayment = async (req, res) => {
@@ -148,24 +111,38 @@ exports.confirmPayment = async (req, res) => {
 
 
 // 3- Get Receipt by Scanning QR (No changes needed here)
+
+
 exports.getReceipt = async (req, res) => {
   try {
     const { paymentId } = req.params;
     const payment = await Payment.findById(paymentId).populate('products.product');
+
     if (!payment) {
       return res.status(404).json({ message: 'Receipt not found' });
     }
+
+    const receipt = {
+      products: payment.products.map(item => ({
+        name: item.product.name,
+        price: item.product.price,
+        quantity: item.quantity,
+      })),
+      totalAmount: payment.totalAmount,
+      paidAt: payment.updatedAt,
+      paymentId: payment._id.toString(),
+    };
+
+    // Convert receipt to stringified JSON for QR
+    const qrData = JSON.stringify(receipt);
+
+    // Generate QR Code as Data URL
+    const qrCode = await QRCode.toDataURL(qrData);
+
     res.status(200).json({
       message: 'Receipt fetched successfully',
-      receipt: {
-        products: payment.products.map(item => ({
-          name: item.product.name,
-          price: item.product.price,
-          quantity: item.quantity,
-        })),
-        totalAmount: payment.totalAmount,
-        paidAt: payment.updatedAt,
-      },
+      receipt,
+      qrCode, // This is a base64 image you can embed directly
     });
   } catch (error) {
     console.error('Get Receipt Error:', error);
