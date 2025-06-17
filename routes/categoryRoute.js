@@ -14,7 +14,7 @@ router.post(
   authorize("admin"), 
   upload.single("image"),
   categoryController.createCategory
-);
+); 
 
 router.put(
   "/:id",

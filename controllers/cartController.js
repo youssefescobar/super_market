@@ -55,7 +55,7 @@ exports.addProductToCart = async (req, res, next) => {
 exports.getMyCart = async (req, res) => {
   try {
     const userId = req.user.id;
-
+ 
     let cart = await Cart.findOne({ userId }).populate(
       "items.productId",
       "name imageUrl price description"
@@ -124,7 +124,7 @@ exports.removeCart = async (req, res, next) => {
 exports.decreaseProductQuantity = async (req, res, next) => {
   try {
     const userId = req.user.id;
-    const productId = req.body;
+    const {productId} = req.body;
     //   const userObjectId = new mongoose.Types.ObjectId(userId);
 
     let cart = await Cart.findOne({ userId });
@@ -164,7 +164,7 @@ exports.decreaseProductQuantity = async (req, res, next) => {
 exports.removeProductFromCart = async (req, res, next) => {
   try {
     const userId = req.user.id;
-    const productId = req.body;
+    const {productId} = req.body;
 
     const cart = await Cart.findOne({ userId });
     if (!cart) return res.status(404).json({ message: "Cart not found" });
