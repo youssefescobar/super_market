@@ -82,26 +82,55 @@ exports.confirmPayment = async (req, res) => {
   try {
     const { paymentId } = req.body;
     const payment = await Payment.findById(paymentId).populate('products.product');
+
     if (!payment) {
       return res.status(404).json({ message: 'Payment not found' });
     }
+
+    // Check and update product stock
     for (const item of payment.products) {
       const quantityPurchased = item.quantity;
       const product = item.product;
+
       if (product.stock < quantityPurchased) {
         return res.status(400).json({ message: `Insufficient stock for product: ${product.name}` });
       }
+
       product.stock -= quantityPurchased;
       await product.save();
     }
+
+    // Update payment status
     payment.paymentStatus = 'paid';
-    const qrCodeDataURL = await QRCode.toDataURL(payment._id.toString());
-    payment.receiptQRCode = qrCodeDataURL;
+
+    // Prepare receipt data
+    const receipt = {
+      products: payment.products.map(item => ({
+        name: item.product.name,
+        price: item.product.price,
+        quantity: item.quantity,
+      })),
+      totalAmount: payment.totalAmount,
+      paidAt: payment.updatedAt, // Or a new Date() if you prefer the exact confirmation time
+      paymentId: payment._id.toString(),
+    };
+
+    // Convert receipt to stringified JSON for QR
+    const qrData = JSON.stringify(receipt);
+
+    // Generate QR Code as Data URL for the receipt
+    const qrCodeDataURL = await QRCode.toDataURL(qrData);
+    payment.receiptQRCode = qrCodeDataURL; // Store the QR code in the payment document
+
     await payment.save();
+
+    // Clear the user's cart after successful payment
     await Cart.findOneAndDelete({ userId: payment.user });
+
     res.status(200).json({
-      message: 'Payment confirmed and QR receipt ready',
-      receiptQRCode: qrCodeDataURL,
+      message: 'Payment confirmed and receipt generated successfully!',
+      receipt,
+      receiptQRCode: qrCodeDataURL, // Send the QR code back in the response
     });
   } catch (error) {
     console.error('Confirm Payment Error:', error);
@@ -109,10 +138,7 @@ exports.confirmPayment = async (req, res) => {
   }
 };
 
-
 // 3- Get Receipt by Scanning QR (No changes needed here)
-
-
 exports.getReceipt = async (req, res) => {
   try {
     const { paymentId } = req.params;
