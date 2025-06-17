@@ -130,7 +130,7 @@ exports.getReceipt = async (req, res) => {
       })),
       totalAmount: payment.totalAmount,
       paidAt: payment.updatedAt,
-      paymentId: payment._id.toString(),
+      paymentId: payment._id.toString(), 
     };
 
     // Convert receipt to stringified JSON for QR
