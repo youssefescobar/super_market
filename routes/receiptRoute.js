@@ -1,19 +1,21 @@
-// const express = require('express');
-// const router = express.Router();
-// const receiptController = require('../controllers/receiptControllers');
+const express = require('express');
+const router = express.Router();
+const {
+  getAllReceipts,
+  getReceiptById,
+  getMyReceipts
+} = require('../controllers/receiptControllers');
 
-// router.post('/create',receiptController.createReceipt);
-// router.get('/:id',receiptController.getReceipt);
-// router.post('/verfy',receiptController.verifyReceipt);
+const auth = require('../middleware/authMiddleware');
+const authorize = require('../middleware/authorize');
 
+// GET /api/receipts - Admin only
+router.get('/', auth, getAllReceipts);
 
+// GET /api/receipts/myreceipts - Logged-in user only
+router.get('/myreceipts', auth, getMyReceipts);
 
-// router.post('/create',receiptController.createReceipt);
+// GET /api/receipts/:id - Only owner of receipt can access
+router.get('/:id', auth, getReceiptById);
 
-
-// module.exports = router;
-
-
-
-
-
+module.exports = router;
